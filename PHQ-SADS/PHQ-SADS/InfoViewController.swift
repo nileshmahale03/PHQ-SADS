@@ -9,11 +9,29 @@
 import UIKit
 
 class InfoViewController: UIViewController {
+    
+    @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    @IBOutlet weak var organizeBarButton: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Add title
         self.navigationItem.title = "Info"
+        
+        // When the menu button is tapped, it will call the revealToggle: method to display the left-sidebar menu & when the organize button is tapped, it will call the revealToggle: method to display the right-sidebar menu.
+        
+        if revealViewController() != nil {
+            revealViewController().rearViewRevealWidth = 200
+            menuBarButton.target = revealViewController()
+            menuBarButton.action = "revealToggle:"
+            
+            revealViewController().rightViewRevealWidth = 150
+            organizeBarButton.target = revealViewController()
+            organizeBarButton.action = "rightRevealToggle:"
+            
+            // User can swipe the content area to activate the sidebar as well
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
 
     override func didReceiveMemoryWarning() {

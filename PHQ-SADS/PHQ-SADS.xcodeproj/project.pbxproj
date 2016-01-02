@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270C1B2E1C3838A400BB9176 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270C1B2D1C3838A400BB9176 /* SWRevealViewController.m */; };
 		27EEDE7C1C36E98600A6CC62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE7B1C36E98600A6CC62 /* AppDelegate.swift */; };
 		27EEDE7E1C36E98600A6CC62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE7D1C36E98600A6CC62 /* ViewController.swift */; };
 		27EEDE811C36E98600A6CC62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27EEDE7F1C36E98600A6CC62 /* Main.storyboard */; };
@@ -25,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		270C1B2B1C3838A300BB9176 /* PHQ-SADS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PHQ-SADS-Bridging-Header.h"; sourceTree = "<group>"; };
+		270C1B2C1C3838A400BB9176 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		270C1B2D1C3838A400BB9176 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		27EEDE781C36E98600A6CC62 /* PHQ-SADS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PHQ-SADS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27EEDE7B1C36E98600A6CC62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27EEDE7D1C36E98600A6CC62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		270C1B2A1C38385200BB9176 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				270C1B2C1C3838A400BB9176 /* SWRevealViewController.h */,
+				270C1B2D1C3838A400BB9176 /* SWRevealViewController.m */,
+				270C1B2B1C3838A300BB9176 /* PHQ-SADS-Bridging-Header.h */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
 		27EEDE6F1C36E98600A6CC62 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +88,7 @@
 		27EEDE7A1C36E98600A6CC62 /* PHQ-SADS */ = {
 			isa = PBXGroup;
 			children = (
+				270C1B2A1C38385200BB9176 /* SWRevealViewController */,
 				27EEDE9B1C37664100A6CC62 /* Core Data */,
 				27EEDE9A1C37662E00A6CC62 /* Bundle Files */,
 				27EEDE991C3765A300A6CC62 /* Storyboards */,
@@ -197,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				270C1B2E1C3838A400BB9176 /* SWRevealViewController.m in Sources */,
 				27EEDE7E1C36E98600A6CC62 /* ViewController.swift in Sources */,
 				27EEDE841C36E98600A6CC62 /* PHQ_SADS.xcdatamodeld in Sources */,
 				27EEDE911C3764F300A6CC62 /* PHQ-9TestViewController.swift in Sources */,
@@ -319,10 +335,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "PHQ-SADS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.code-Programming.PHQ-SADS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PHQ-SADS/PHQ-SADS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -330,10 +349,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "PHQ-SADS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.code-Programming.PHQ-SADS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PHQ-SADS/PHQ-SADS-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -356,6 +377,7 @@
 				27EEDE8F1C36E98600A6CC62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
