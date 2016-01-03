@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		270C1B2E1C3838A400BB9176 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270C1B2D1C3838A400BB9176 /* SWRevealViewController.m */; };
 		27EEDE7C1C36E98600A6CC62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE7B1C36E98600A6CC62 /* AppDelegate.swift */; };
-		27EEDE7E1C36E98600A6CC62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE7D1C36E98600A6CC62 /* ViewController.swift */; };
 		27EEDE811C36E98600A6CC62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27EEDE7F1C36E98600A6CC62 /* Main.storyboard */; };
 		27EEDE841C36E98600A6CC62 /* PHQ_SADS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE821C36E98600A6CC62 /* PHQ_SADS.xcdatamodeld */; };
 		27EEDE861C36E98600A6CC62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27EEDE851C36E98600A6CC62 /* Assets.xcassets */; };
@@ -23,6 +22,7 @@
 		27EEDEA11C3766E700A6CC62 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDEA01C3766E700A6CC62 /* InfoViewController.swift */; };
 		27EEDEA31C37723C00A6CC62 /* RightMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDEA21C37723C00A6CC62 /* RightMenuTableViewController.swift */; };
 		27EEDEA51C37724E00A6CC62 /* LeftMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDEA41C37724E00A6CC62 /* LeftMenuTableViewController.swift */; };
+		27F4D2F61C38A03000D097E0 /* PHQ-SADSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4D2F51C38A03000D097E0 /* PHQ-SADSViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,6 @@
 		270C1B2D1C3838A400BB9176 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		27EEDE781C36E98600A6CC62 /* PHQ-SADS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PHQ-SADS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27EEDE7B1C36E98600A6CC62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27EEDE7D1C36E98600A6CC62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27EEDE801C36E98600A6CC62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27EEDE831C36E98600A6CC62 /* PHQ_SADS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PHQ_SADS.xcdatamodel; sourceTree = "<group>"; };
 		27EEDE851C36E98600A6CC62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		27EEDEA01C3766E700A6CC62 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		27EEDEA21C37723C00A6CC62 /* RightMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuTableViewController.swift; sourceTree = "<group>"; };
 		27EEDEA41C37724E00A6CC62 /* LeftMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuTableViewController.swift; sourceTree = "<group>"; };
+		27F4D2F51C38A03000D097E0 /* PHQ-SADSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHQ-SADSViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 		27EEDE981C37654900A6CC62 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				27EEDE7D1C36E98600A6CC62 /* ViewController.swift */,
+				27F4D2F51C38A03000D097E0 /* PHQ-SADSViewController.swift */,
 				27EEDEA21C37723C00A6CC62 /* RightMenuTableViewController.swift */,
 				27EEDEA41C37724E00A6CC62 /* LeftMenuTableViewController.swift */,
 				27EEDE901C3764F300A6CC62 /* PHQ-9TestViewController.swift */,
@@ -213,10 +213,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				270C1B2E1C3838A400BB9176 /* SWRevealViewController.m in Sources */,
-				27EEDE7E1C36E98600A6CC62 /* ViewController.swift in Sources */,
 				27EEDE841C36E98600A6CC62 /* PHQ_SADS.xcdatamodeld in Sources */,
 				27EEDE911C3764F300A6CC62 /* PHQ-9TestViewController.swift in Sources */,
 				27EEDE9D1C3766CB00A6CC62 /* ResultViewController.swift in Sources */,
+				27F4D2F61C38A03000D097E0 /* PHQ-SADSViewController.swift in Sources */,
 				27EEDEA11C3766E700A6CC62 /* InfoViewController.swift in Sources */,
 				27EEDEA51C37724E00A6CC62 /* LeftMenuTableViewController.swift in Sources */,
 				27EEDEA31C37723C00A6CC62 /* RightMenuTableViewController.swift in Sources */,
