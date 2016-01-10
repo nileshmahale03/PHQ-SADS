@@ -17,6 +17,8 @@ class HistoryViewController: UIViewController {
         super.viewDidLoad()
         // Add title
         self.navigationItem.title = "History"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor(),
+            NSFontAttributeName: UIFont(name: "avenir next condensed", size: 21)!]
         
         // When the menu button is tapped, it will call the revealToggle: method to display the left-sidebar menu & when the organize button is tapped, it will call the revealToggle: method to display the right-sidebar menu.
         

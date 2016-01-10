@@ -20,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Customization for Page View Controller
         let pageController = UIPageControl.appearance()
-        pageController.pageIndicatorTintColor = UIColor.lightGrayColor()
-        pageController.currentPageIndicatorTintColor = UIColor.blackColor()
-        pageController.backgroundColor = UIColor.whiteColor()
+        pageController.pageIndicatorTintColor = UIColor.whiteColor()
+        pageController.currentPageIndicatorTintColor = UIColor(colorLiteralRed: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1)
+        pageController.backgroundColor = UIColor(colorLiteralRed: 240.0/255.0, green: 242.0/255.0, blue: 243.0/255.0, alpha: 1)
         
         return true
     }

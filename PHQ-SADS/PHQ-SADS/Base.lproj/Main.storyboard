@@ -643,6 +643,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overview" translatesAutoresizingMaskIntoConstraints="NO" id="OTQ-5J-aBe">
+                                <rect key="frame" x="20" y="72" width="560" height="199"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="199" id="fEi-Oz-kiz"/>
+                                </constraints>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f04-FH-E1r">
                                 <rect key="frame" x="0.0" y="279" width="600" height="321"/>
                                 <string key="text">The PHQ was originally developed to detect 5 disorders, the depression, anxiety, and somatoform modules (in that order) have turned out to be the most popular. The PHQ-SADS was developed to reflect that most primary-care patients with depressive or anxiety disorders present with somatic complaints; the co-occurrence of somatic, anxiety, and depressive symptoms (the SAD triad) is exceptionally common. The PHQ-SADS includes PHQ-9, GAD-7, and PHQ-15 as well as panic symptoms for PHQ.
@@ -651,22 +657,16 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pen" translatesAutoresizingMaskIntoConstraints="NO" id="u4Z-KK-anW">
-                                <rect key="frame" x="180" y="83" width="240" height="188"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Ua3-3k-mp1"/>
-                                    <constraint firstAttribute="height" constant="188" id="dMD-Nb-1Y4"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="f04-FH-E1r" firstAttribute="leading" secondItem="ecD-Lf-hds" secondAttribute="leading" id="0Ua-Ds-pUs"/>
-                            <constraint firstItem="u4Z-KK-anW" firstAttribute="top" secondItem="xEX-R0-5Wt" secondAttribute="bottom" constant="19" id="JyG-QW-7kG"/>
-                            <constraint firstItem="u4Z-KK-anW" firstAttribute="centerX" secondItem="ecD-Lf-hds" secondAttribute="centerX" id="MHM-HU-nWs"/>
+                            <constraint firstItem="OTQ-5J-aBe" firstAttribute="top" secondItem="xEX-R0-5Wt" secondAttribute="bottom" constant="8" symbolic="YES" id="68T-Hv-hxU"/>
+                            <constraint firstItem="f04-FH-E1r" firstAttribute="top" secondItem="OTQ-5J-aBe" secondAttribute="bottom" constant="8" symbolic="YES" id="Hp4-zc-MFj"/>
                             <constraint firstItem="f04-FH-E1r" firstAttribute="bottom" secondItem="ajT-iV-VUE" secondAttribute="top" id="P5J-o7-Vam"/>
-                            <constraint firstItem="u4Z-KK-anW" firstAttribute="centerX" secondItem="f04-FH-E1r" secondAttribute="centerX" id="Z4s-I5-9hq"/>
-                            <constraint firstItem="f04-FH-E1r" firstAttribute="top" secondItem="u4Z-KK-anW" secondAttribute="bottom" constant="8" symbolic="YES" id="c9z-sV-Uhx"/>
+                            <constraint firstItem="OTQ-5J-aBe" firstAttribute="trailing" secondItem="ecD-Lf-hds" secondAttribute="trailingMargin" id="UC5-C1-nao"/>
+                            <constraint firstItem="OTQ-5J-aBe" firstAttribute="centerX" secondItem="f04-FH-E1r" secondAttribute="centerX" id="kz2-bU-oit"/>
+                            <constraint firstItem="OTQ-5J-aBe" firstAttribute="leading" secondItem="ecD-Lf-hds" secondAttribute="leadingMargin" id="r8n-sz-mMF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q4v-jE-wwR">
@@ -728,17 +728,106 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wc-G4-IxF">
-                                <rect key="frame" x="20" y="28" width="69" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wc-G4-IxF">
+                                <rect key="frame" x="20" y="28" width="560" height="257"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="textColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Several days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9J-MT-U49">
+                                <rect key="frame" x="76" y="379" width="223" height="40"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More than half the days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjH-bs-HXr">
+                                <rect key="frame" x="76" y="427" width="223" height="40"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vlz-gs-4Dn">
+                                <rect key="frame" x="20" y="327" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="mFu-Xm-dSp"/>
+                                    <constraint firstAttribute="width" constant="40" id="uOc-wA-Wnf"/>
+                                </constraints>
+                                <state key="normal" image="blankedCheckBox">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpX-IB-8wI">
+                                <rect key="frame" x="20" y="379" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xPx-K3-2bU"/>
+                                </constraints>
+                                <state key="normal" image="blankedCheckBox">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXw-bv-G3m">
+                                <rect key="frame" x="20" y="427" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JXf-7P-NSv"/>
+                                </constraints>
+                                <state key="normal" image="blankedCheckBox">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVj-Q6-cB4">
+                                <rect key="frame" x="20" y="475" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="llB-ub-eZb"/>
+                                </constraints>
+                                <state key="normal" image="blankedCheckBox">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not at all" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfD-GD-x9N">
+                                <rect key="frame" x="76" y="327" width="223" height="40"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nearly everyday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iq6-3B-q3k">
+                                <rect key="frame" x="76" y="475" width="223" height="40"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2Wc-G4-IxF" firstAttribute="top" secondItem="CuN-hO-cDQ" secondAttribute="bottom" constant="8" id="994-0g-Rwi"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="2Wc-G4-IxF" secondAttribute="leading" id="wWm-uL-tGv"/>
+                            <constraint firstItem="iq6-3B-q3k" firstAttribute="top" secondItem="qjH-bs-HXr" secondAttribute="bottom" constant="8" symbolic="YES" id="11u-fh-2f2"/>
+                            <constraint firstItem="bfD-GD-x9N" firstAttribute="bottom" secondItem="Vlz-gs-4Dn" secondAttribute="bottom" id="1ag-3j-xJG"/>
+                            <constraint firstItem="jVj-Q6-cB4" firstAttribute="top" secondItem="iq6-3B-q3k" secondAttribute="top" id="2Iy-lM-cgR"/>
+                            <constraint firstItem="Vlz-gs-4Dn" firstAttribute="top" secondItem="2Wc-G4-IxF" secondAttribute="bottom" constant="42" id="3cL-na-iqd"/>
+                            <constraint firstItem="NpX-IB-8wI" firstAttribute="leading" secondItem="Vlz-gs-4Dn" secondAttribute="leading" id="4e4-7J-aMB"/>
+                            <constraint firstItem="WXw-bv-G3m" firstAttribute="trailing" secondItem="jVj-Q6-cB4" secondAttribute="trailing" id="7j0-Td-JlZ"/>
+                            <constraint firstItem="WXw-bv-G3m" firstAttribute="top" secondItem="NpX-IB-8wI" secondAttribute="bottom" constant="8" symbolic="YES" id="8Rr-r4-fnu"/>
+                            <constraint firstItem="jVj-Q6-cB4" firstAttribute="top" secondItem="WXw-bv-G3m" secondAttribute="bottom" constant="8" symbolic="YES" id="9s8-i5-bXS"/>
+                            <constraint firstItem="NpX-IB-8wI" firstAttribute="top" secondItem="G9J-MT-U49" secondAttribute="top" id="AYk-y4-eXs"/>
+                            <constraint firstItem="qjH-bs-HXr" firstAttribute="top" secondItem="WXw-bv-G3m" secondAttribute="top" id="CLF-ar-eOj"/>
+                            <constraint firstItem="jVj-Q6-cB4" firstAttribute="leading" secondItem="WXw-bv-G3m" secondAttribute="leading" id="HRY-PU-i1U"/>
+                            <constraint firstItem="WXw-bv-G3m" firstAttribute="trailing" secondItem="NpX-IB-8wI" secondAttribute="trailing" id="TpL-15-Nqv"/>
+                            <constraint firstItem="Vlz-gs-4Dn" firstAttribute="leading" secondItem="pvv-x2-djS" secondAttribute="leadingMargin" id="XQo-2b-U09"/>
+                            <constraint firstItem="G9J-MT-U49" firstAttribute="leading" secondItem="bfD-GD-x9N" secondAttribute="leading" id="YLl-VR-5YK"/>
+                            <constraint firstItem="G9J-MT-U49" firstAttribute="trailing" secondItem="bfD-GD-x9N" secondAttribute="trailing" id="Zes-WZ-7hN"/>
+                            <constraint firstItem="bfD-GD-x9N" firstAttribute="leading" secondItem="Vlz-gs-4Dn" secondAttribute="trailing" constant="16" id="djp-ls-5be"/>
+                            <constraint firstItem="qjH-bs-HXr" firstAttribute="leading" secondItem="G9J-MT-U49" secondAttribute="leading" id="dpY-eo-ebX"/>
+                            <constraint firstItem="jVj-Q6-cB4" firstAttribute="bottom" secondItem="iq6-3B-q3k" secondAttribute="bottom" id="eGe-9r-mff"/>
+                            <constraint firstItem="qjH-bs-HXr" firstAttribute="top" secondItem="G9J-MT-U49" secondAttribute="bottom" constant="8" symbolic="YES" id="eHM-oM-j9N"/>
+                            <constraint firstItem="2Wc-G4-IxF" firstAttribute="top" secondItem="CuN-hO-cDQ" secondAttribute="bottom" constant="8" symbolic="YES" id="f9l-Z1-DL0"/>
+                            <constraint firstItem="2Wc-G4-IxF" firstAttribute="leading" secondItem="Vlz-gs-4Dn" secondAttribute="leading" id="kds-MW-mQY"/>
+                            <constraint firstItem="bfD-GD-x9N" firstAttribute="top" secondItem="Vlz-gs-4Dn" secondAttribute="top" id="ldg-DP-gAl"/>
+                            <constraint firstItem="WXw-bv-G3m" firstAttribute="leading" secondItem="NpX-IB-8wI" secondAttribute="leading" id="off-ze-HQS"/>
+                            <constraint firstItem="92y-zb-0nT" firstAttribute="top" secondItem="jVj-Q6-cB4" secondAttribute="bottom" constant="85" id="owe-FV-MUk"/>
+                            <constraint firstItem="qjH-bs-HXr" firstAttribute="trailing" secondItem="G9J-MT-U49" secondAttribute="trailing" id="pae-ZG-72f"/>
+                            <constraint firstItem="qjH-bs-HXr" firstAttribute="leading" secondItem="iq6-3B-q3k" secondAttribute="leading" id="tSq-LA-eFh"/>
+                            <constraint firstItem="qjH-bs-HXr" firstAttribute="trailing" secondItem="iq6-3B-q3k" secondAttribute="trailing" id="w4K-r3-iSo"/>
+                            <constraint firstItem="2Wc-G4-IxF" firstAttribute="trailing" secondItem="pvv-x2-djS" secondAttribute="trailingMargin" id="wTr-1j-BwO"/>
+                            <constraint firstItem="Vlz-gs-4Dn" firstAttribute="trailing" secondItem="NpX-IB-8wI" secondAttribute="trailing" id="xYm-uW-dcg"/>
+                            <constraint firstItem="NpX-IB-8wI" firstAttribute="top" secondItem="Vlz-gs-4Dn" secondAttribute="bottom" constant="12" id="z8y-aX-jcr"/>
                         </constraints>
                     </view>
                     <connections>
@@ -841,15 +930,16 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="blankedCheckBox" width="64" height="64"/>
         <image name="history" width="1024" height="1024"/>
         <image name="info" width="1024" height="1024"/>
         <image name="menu" width="22" height="22"/>
-        <image name="pen" width="512" height="512"/>
+        <image name="overview" width="512" height="512"/>
         <image name="result" width="1024" height="1024"/>
         <image name="test" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YTY-m2-fmw"/>
-        <segue reference="hGD-9j-jbJ"/>
+        <segue reference="ZwC-Ns-maj"/>
     </inferredMetricsTieBreakers>
 </document>
