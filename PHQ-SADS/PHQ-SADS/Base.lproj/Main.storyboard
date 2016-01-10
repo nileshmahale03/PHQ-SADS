@@ -104,7 +104,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="QCq-f0-kvh" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="IqL-1Y-ayh"/>
+                                            <segue destination="FSa-iF-2Vr" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="hGD-9j-jbJ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MaP-5W-Vf6">
@@ -126,9 +126,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <segue destination="SpL-1o-VmT" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="YT9-tY-Aq2"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eWG-0D-62Q">
                                         <rect key="frame" x="0.0" y="176" width="600" height="44"/>
@@ -149,9 +146,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <segue destination="wug-XM-754" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="lGt-15-TNR"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -583,7 +577,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yaA-8i-0LL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2549" y="3396"/>
+            <point key="canvasLocation" x="2529" y="3041"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="695-ZN-KBi">
@@ -609,7 +603,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44C-ba-Saw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2549" y="2722"/>
+            <point key="canvasLocation" x="2529" y="2367"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="dmm-gN-T7s">
@@ -635,7 +629,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6uO-nY-rQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2549" y="2048"/>
+            <point key="canvasLocation" x="2529" y="1693"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="35p-3d-0NZ">
@@ -649,12 +643,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f04-FH-E1r">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f04-FH-E1r">
                                 <rect key="frame" x="0.0" y="279" width="600" height="321"/>
-                                <mutableString key="text">The PHQ was originally developed to detect 5 disorders, the depression, anxiety, and somatoform modules (in that order) have turned out to be the most popular. The PHQ-SADS was developed to reflect that most primary-care patients with depressive or anxiety disorders present with somatic complaints; the co-occurrence of somatic, anxiety, and depressive symptoms (the SAD triad) is exceptionally common. The PHQ-SADS includes PHQ-9, GAD-7, and PHQ-15 as well as panic symptoms for PHQ.
-The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</mutableString>
+                                <string key="text">The PHQ was originally developed to detect 5 disorders, the depression, anxiety, and somatoform modules (in that order) have turned out to be the most popular. The PHQ-SADS was developed to reflect that most primary-care patients with depressive or anxiety disorders present with somatic complaints; the co-occurrence of somatic, anxiety, and depressive symptoms (the SAD triad) is exceptionally common. The PHQ-SADS includes PHQ-9, GAD-7, and PHQ-15 as well as panic symptoms for PHQ.
+The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pen" translatesAutoresizingMaskIntoConstraints="NO" id="u4Z-KK-anW">
@@ -686,33 +680,7 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</mutableStr
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fr1-3c-5Cn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2549" y="-1362"/>
-        </scene>
-        <!--Panic Symptoms ForPHQ Test View Controller-->
-        <scene sceneID="1c6-Sc-Q7G">
-            <objects>
-                <viewController id="NE3-lt-uzW" customClass="PanicSymptomsForPHQTestViewController" customModule="PHQ_SADS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ppg-xM-67r"/>
-                        <viewControllerLayoutGuide type="bottom" id="2e7-VB-U3q"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="az5-Am-bkp">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="q3t-tz-PaI">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="Gze-3W-hx0"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="75H-cf-sIK"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="menuBarButton" destination="Gze-3W-hx0" id="6h0-f1-348"/>
-                        <outlet property="organizeBarButton" destination="75H-cf-sIK" id="1NT-LB-buY"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4uE-XS-njI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2549" y="1352"/>
+            <point key="canvasLocation" x="2529" y="328"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="tF6-an-pBa">
@@ -738,59 +706,48 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</mutableStr
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mgf-cx-ngz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2549" y="-679"/>
+            <point key="canvasLocation" x="2529" y="1011"/>
         </scene>
-        <!--Test View Controller-->
-        <scene sceneID="v6T-L3-RWd">
+        <!--Page View Controller-->
+        <scene sceneID="2iT-b2-LNL">
             <objects>
-                <viewController id="nkE-c3-07s" customClass="GAD_7TestViewController" customModule="PHQ_SADS" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="tc1-1Y-1ib" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="goB-hg-Puu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3251" y="715"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="nqm-sc-lha">
+            <objects>
+                <viewController storyboardIdentifier="ContentViewController" id="Rqf-tV-obI" customClass="ContentViewController" customModule="PHQ_SADS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tNi-rg-1Gk"/>
-                        <viewControllerLayoutGuide type="bottom" id="pEj-Lt-PvD"/>
+                        <viewControllerLayoutGuide type="top" id="CuN-hO-cDQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="92y-zb-0nT"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="C1p-O6-rht">
+                    <view key="view" contentMode="scaleToFill" id="pvv-x2-djS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wc-G4-IxF">
+                                <rect key="frame" x="20" y="28" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Wc-G4-IxF" firstAttribute="top" secondItem="CuN-hO-cDQ" secondAttribute="bottom" constant="8" id="994-0g-Rwi"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2Wc-G4-IxF" secondAttribute="leading" id="wWm-uL-tGv"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="k2N-UL-9wR">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="mLq-zJ-IRB"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="X7q-zl-thV"/>
-                    </navigationItem>
                     <connections>
-                        <outlet property="menuBarButton" destination="mLq-zJ-IRB" id="AX4-iZ-Rie"/>
-                        <outlet property="organizeBarButton" destination="X7q-zl-thV" id="v4g-91-aVI"/>
+                        <outlet property="titleLabel" destination="2Wc-G4-IxF" id="mw4-je-QEu"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WPY-1F-a6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Md6-rW-0LS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2549" y="-2"/>
-        </scene>
-        <!--Test View Controller-->
-        <scene sceneID="kor-S0-78x">
-            <objects>
-                <viewController id="MxA-3U-QFd" customClass="PHQ_15TestViewController" customModule="PHQ_SADS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jTP-ne-dXM"/>
-                        <viewControllerLayoutGuide type="bottom" id="D4p-Ij-jAr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KXL-kl-hfI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="P7A-s0-bWX">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="8Eb-wC-67a"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="R4D-NS-boR"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="menuBarButton" destination="8Eb-wC-67a" id="IBh-ra-HCd"/>
-                        <outlet property="organizeBarButton" destination="R4D-NS-boR" id="hBU-3m-GoR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OJv-ud-RZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2549" y="670"/>
+            <point key="canvasLocation" x="3251" y="1369"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xWA-lq-Ew5">
@@ -808,61 +765,7 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</mutableStr
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EwW-ES-RhW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1737" y="-679"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="dUb-RF-jv6">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QCq-f0-kvh" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hu9-AR-OrZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="nkE-c3-07s" kind="relationship" relationship="rootViewController" id="y3Y-rU-jcU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CkB-Vl-0Ye" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1737" y="-2"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="xYU-Pi-KE7">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SpL-1o-VmT" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k6I-8t-qb0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="MxA-3U-QFd" kind="relationship" relationship="rootViewController" id="TZB-kH-7Ev"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="79G-fG-Dug" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1737" y="670"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="5oJ-2n-Tpv">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wug-XM-754" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a01-O5-XFf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="NE3-lt-uzW" kind="relationship" relationship="rootViewController" id="kA4-6P-I7I"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w8I-ea-5xr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1737" y="1352"/>
+            <point key="canvasLocation" x="1717" y="1011"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZRI-Gr-i14">
@@ -880,7 +783,7 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</mutableStr
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVZ-Mn-bJm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1737" y="2048"/>
+            <point key="canvasLocation" x="1717" y="1693"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wh3-zv-2gK">
@@ -898,7 +801,7 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</mutableStr
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMf-6s-VbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1737" y="2722"/>
+            <point key="canvasLocation" x="1717" y="2367"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o4u-3m-fX1">
@@ -916,7 +819,7 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</mutableStr
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oXj-22-oDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1737" y="3396"/>
+            <point key="canvasLocation" x="1717" y="3041"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sql-41-WLG">
@@ -934,7 +837,7 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</mutableStr
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nqf-zy-FvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1737" y="-1362"/>
+            <point key="canvasLocation" x="1717" y="328"/>
         </scene>
     </scenes>
     <resources>
@@ -947,5 +850,6 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</mutableStr
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YTY-m2-fmw"/>
+        <segue reference="hGD-9j-jbJ"/>
     </inferredMetricsTieBreakers>
 </document>

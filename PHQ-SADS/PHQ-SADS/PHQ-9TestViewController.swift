@@ -8,11 +8,14 @@
 
 import UIKit
 
-class PHQ_9TestViewController: UIViewController {
+class PHQ_9TestViewController: UIViewController, UIPageViewControllerDataSource {
     
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     @IBOutlet weak var organizeBarButton: UIBarButtonItem!
+    
+    var pageViewController: UIPageViewController!
+    var pageTitles: NSArray!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,23 +35,90 @@ class PHQ_9TestViewController: UIViewController {
             
         // User can swipe the content area to activate the sidebar as well
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+            // Page View Controller
+            self.pageTitles = NSArray(objects: "Question 1", "Question 2", "Question 3", "Question 4", "Question 5", "Question 6", "Question 7", "Question 8", "Question 9")
+            
+            self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
+            
+            self.pageViewController.dataSource = self
+            
+            let startViewController = self.viewControllerAtIndex(0) as ContentViewController
+            let viewControllers = NSArray(object: startViewController)
+            
+            self.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
+            
+            self.addChildViewController(self.pageViewController)
+            self.view.addSubview(self.pageViewController.view)
+            self.pageViewController.didMoveToParentViewController(self)
+            
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func viewControllerAtIndex(index: Int) -> ContentViewController {
+        
+        if (self.pageTitles.count == 0) || (index >= self.pageTitles.count) {
+            return ContentViewController()
+        }
+        
+        let viewController: ContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ContentViewController") as! ContentViewController
+        
+        viewController.pageIndex = index
+        viewController.titleText = self.pageTitles[index] as! String
+        
+        return viewController
+        
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        
+        let viewController = viewController as! ContentViewController
+        var index = viewController.pageIndex as Int
+        
+        if (index == 0 || index == NSNotFound) {
+            return nil
+        }
+        
+        index--
+        return self.viewControllerAtIndex(index)
+        
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        
+        let viewController = viewController as! ContentViewController
+        var index = viewController.pageIndex as Int
+        
+        if (index ==  NSNotFound) {
+            return nil
+        }
+        
+        index++
+        
+        if (index == self.pageTitles.count) {
+            return nil
+        }
+        
+        return self.viewControllerAtIndex(index)
+        
+    }
+    
+    // The number of items reflected in the page indicator.
+    
+    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+        
+        return self.pageTitles.count
+    }
+    
+    // The selected item reflected in the page indicator.
+    
+    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+        
+        return 0
+        
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

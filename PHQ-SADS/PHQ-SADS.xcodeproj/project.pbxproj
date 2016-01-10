@@ -8,15 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		270C1B2E1C3838A400BB9176 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270C1B2D1C3838A400BB9176 /* SWRevealViewController.m */; };
+		2796C6671C4198ED00989DCE /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796C6661C4198ED00989DCE /* ContentViewController.swift */; };
 		27EEDE7C1C36E98600A6CC62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE7B1C36E98600A6CC62 /* AppDelegate.swift */; };
 		27EEDE811C36E98600A6CC62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27EEDE7F1C36E98600A6CC62 /* Main.storyboard */; };
 		27EEDE841C36E98600A6CC62 /* PHQ_SADS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE821C36E98600A6CC62 /* PHQ_SADS.xcdatamodeld */; };
 		27EEDE861C36E98600A6CC62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27EEDE851C36E98600A6CC62 /* Assets.xcassets */; };
 		27EEDE891C36E98600A6CC62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27EEDE871C36E98600A6CC62 /* LaunchScreen.storyboard */; };
 		27EEDE911C3764F300A6CC62 /* PHQ-9TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE901C3764F300A6CC62 /* PHQ-9TestViewController.swift */; };
-		27EEDE931C37651300A6CC62 /* GAD-7TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE921C37651300A6CC62 /* GAD-7TestViewController.swift */; };
-		27EEDE951C37652400A6CC62 /* PHQ-15TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE941C37652400A6CC62 /* PHQ-15TestViewController.swift */; };
-		27EEDE971C37653F00A6CC62 /* PanicSymptomsForPHQTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE961C37653F00A6CC62 /* PanicSymptomsForPHQTestViewController.swift */; };
 		27EEDE9D1C3766CB00A6CC62 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE9C1C3766CB00A6CC62 /* ResultViewController.swift */; };
 		27EEDE9F1C3766DA00A6CC62 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE9E1C3766DA00A6CC62 /* HistoryViewController.swift */; };
 		27EEDEA11C3766E700A6CC62 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDEA01C3766E700A6CC62 /* InfoViewController.swift */; };
@@ -29,6 +27,7 @@
 		270C1B2B1C3838A300BB9176 /* PHQ-SADS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PHQ-SADS-Bridging-Header.h"; sourceTree = "<group>"; };
 		270C1B2C1C3838A400BB9176 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		270C1B2D1C3838A400BB9176 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		2796C6661C4198ED00989DCE /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		27EEDE781C36E98600A6CC62 /* PHQ-SADS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PHQ-SADS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27EEDE7B1C36E98600A6CC62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27EEDE801C36E98600A6CC62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,9 +36,6 @@
 		27EEDE881C36E98600A6CC62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27EEDE8A1C36E98600A6CC62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27EEDE901C3764F300A6CC62 /* PHQ-9TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHQ-9TestViewController.swift"; sourceTree = "<group>"; };
-		27EEDE921C37651300A6CC62 /* GAD-7TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GAD-7TestViewController.swift"; sourceTree = "<group>"; };
-		27EEDE941C37652400A6CC62 /* PHQ-15TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHQ-15TestViewController.swift"; sourceTree = "<group>"; };
-		27EEDE961C37653F00A6CC62 /* PanicSymptomsForPHQTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanicSymptomsForPHQTestViewController.swift; sourceTree = "<group>"; };
 		27EEDE9C1C3766CB00A6CC62 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		27EEDE9E1C3766DA00A6CC62 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		27EEDEA01C3766E700A6CC62 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -104,9 +100,7 @@
 				27EEDEA21C37723C00A6CC62 /* RightMenuTableViewController.swift */,
 				27EEDEA41C37724E00A6CC62 /* LeftMenuTableViewController.swift */,
 				27EEDE901C3764F300A6CC62 /* PHQ-9TestViewController.swift */,
-				27EEDE921C37651300A6CC62 /* GAD-7TestViewController.swift */,
-				27EEDE941C37652400A6CC62 /* PHQ-15TestViewController.swift */,
-				27EEDE961C37653F00A6CC62 /* PanicSymptomsForPHQTestViewController.swift */,
+				2796C6661C4198ED00989DCE /* ContentViewController.swift */,
 				27EEDE9C1C3766CB00A6CC62 /* ResultViewController.swift */,
 				27EEDE9E1C3766DA00A6CC62 /* HistoryViewController.swift */,
 				27EEDEA01C3766E700A6CC62 /* InfoViewController.swift */,
@@ -220,11 +214,9 @@
 				27EEDEA11C3766E700A6CC62 /* InfoViewController.swift in Sources */,
 				27EEDEA51C37724E00A6CC62 /* LeftMenuTableViewController.swift in Sources */,
 				27EEDEA31C37723C00A6CC62 /* RightMenuTableViewController.swift in Sources */,
-				27EEDE971C37653F00A6CC62 /* PanicSymptomsForPHQTestViewController.swift in Sources */,
+				2796C6671C4198ED00989DCE /* ContentViewController.swift in Sources */,
 				27EEDE7C1C36E98600A6CC62 /* AppDelegate.swift in Sources */,
 				27EEDE9F1C3766DA00A6CC62 /* HistoryViewController.swift in Sources */,
-				27EEDE951C37652400A6CC62 /* PHQ-15TestViewController.swift in Sources */,
-				27EEDE931C37651300A6CC62 /* GAD-7TestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
