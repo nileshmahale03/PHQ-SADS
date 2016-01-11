@@ -25,6 +25,25 @@ class LeftMenuTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "phq9"){
+            print("hello1")
+            let navigationController : UINavigationController = segue.destinationViewController as! UINavigationController
+            
+            let phq9TestViewController : PHQ_9TestViewController = navigationController.viewControllers[0] as! PHQ_9TestViewController
+            phq9TestViewController.pageTitles = DataSource.sharedInstance.phq9Questions
+            phq9TestViewController.title = "PHQ-9"
+        }
+        else if(segue.identifier == "gad7"){
+            print("hello2")
+            let navigationController : UINavigationController = segue.destinationViewController as! UINavigationController
+            
+            let phq9TestViewController : PHQ_9TestViewController = navigationController.viewControllers[0] as! PHQ_9TestViewController
+            phq9TestViewController.pageTitles = DataSource.sharedInstance.gad7Questions
+            phq9TestViewController.title = "GAD-7"
+        }
+    }
 
     // MARK: - Table view data source
 

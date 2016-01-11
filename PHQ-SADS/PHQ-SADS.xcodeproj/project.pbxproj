@@ -21,6 +21,7 @@
 		27EEDEA31C37723C00A6CC62 /* RightMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDEA21C37723C00A6CC62 /* RightMenuTableViewController.swift */; };
 		27EEDEA51C37724E00A6CC62 /* LeftMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDEA41C37724E00A6CC62 /* LeftMenuTableViewController.swift */; };
 		27F4D2F61C38A03000D097E0 /* PHQ-SADSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4D2F51C38A03000D097E0 /* PHQ-SADSViewController.swift */; };
+		37AA7D9E1C433FDA006ACC14 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA7D9D1C433FDA006ACC14 /* DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		27EEDEA21C37723C00A6CC62 /* RightMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuTableViewController.swift; sourceTree = "<group>"; };
 		27EEDEA41C37724E00A6CC62 /* LeftMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuTableViewController.swift; sourceTree = "<group>"; };
 		27F4D2F51C38A03000D097E0 /* PHQ-SADSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHQ-SADSViewController.swift"; sourceTree = "<group>"; };
+		37AA7D9D1C433FDA006ACC14 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				27EEDE821C36E98600A6CC62 /* PHQ_SADS.xcdatamodeld */,
+				37AA7D9D1C433FDA006ACC14 /* DataSource.swift */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				27EEDE9D1C3766CB00A6CC62 /* ResultViewController.swift in Sources */,
 				27F4D2F61C38A03000D097E0 /* PHQ-SADSViewController.swift in Sources */,
 				27EEDEA11C3766E700A6CC62 /* InfoViewController.swift in Sources */,
+				37AA7D9E1C433FDA006ACC14 /* DataSource.swift in Sources */,
 				27EEDEA51C37724E00A6CC62 /* LeftMenuTableViewController.swift in Sources */,
 				27EEDEA31C37723C00A6CC62 /* RightMenuTableViewController.swift in Sources */,
 				2796C6671C4198ED00989DCE /* ContentViewController.swift in Sources */,

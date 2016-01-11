@@ -20,7 +20,7 @@ class PHQ_9TestViewController: UIViewController, UIPageViewControllerDataSource 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Add title
-        self.navigationItem.title = "PHQ-9"
+//        self.navigationItem.title = "PHQ-9"
         //UIColor(colorLiteralRed: 231.0/255.0, green: 95.0/255.0, blue: 53.0/255.0, alpha: 1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor(),
             NSFontAttributeName: UIFont(name: "avenir next condensed", size: 21)!]
@@ -40,16 +40,16 @@ class PHQ_9TestViewController: UIViewController, UIPageViewControllerDataSource 
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
             // Page View Controller
-            self.pageTitles = NSArray(objects:
-                "You find it easy to introduce yourself to other people.",
-                "You often get so lost in thoughts that you ignore or forget your surroundings.",
-                "You try to respond to your e-mails as soon as possible and cannot stand a messy inbox.",
-                "You find it easy to stay relaxed and focused even when there is some pressure.",
-                "You don't usually initiate conversations.",
-                "You feel a constant need for something new.",
-                "You have numerous and varied interests rather than several specific ones.",
-                "Being adaptable is more important to you than being organized.",
-                "Being able to develop a plan and stick to it is the most important part of every project.")
+//            self.pageTitles = NSArray(objects:
+//                "You find it easy to introduce yourself to other people.",
+//                "You often get so lost in thoughts that you ignore or forget your surroundings.",
+//                "You try to respond to your e-mails as soon as possible and cannot stand a messy inbox.",
+//                "You find it easy to stay relaxed and focused even when there is some pressure.",
+//                "You don't usually initiate conversations.",
+//                "You feel a constant need for something new.",
+//                "You have numerous and varied interests rather than several specific ones.",
+//                "Being adaptable is more important to you than being organized.",
+//                "Being able to develop a plan and stick to it is the most important part of every project.")
             
             self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
             
