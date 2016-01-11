@@ -32,6 +32,10 @@ class DataSource: NSObject {
         "Being adaptable is more important to you than being organized.",
         "Being able to develop a plan and stick to it is the most important part of every project.")
     
+    var currentQuestionSet : NSArray?
+    
+    var currentAnswerSet : [Int]?
+    
     class var sharedInstance: DataSource {
         //2
         struct Singleton {

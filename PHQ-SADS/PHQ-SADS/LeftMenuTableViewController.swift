@@ -29,6 +29,11 @@ class LeftMenuTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "phq9"){
             print("hello1")
+            DataSource.sharedInstance.currentQuestionSet = DataSource.sharedInstance.phq9Questions
+            DataSource.sharedInstance.currentAnswerSet = [Int]()
+            for (var i = 0; i < DataSource.sharedInstance.currentQuestionSet?.count; i++){
+                DataSource.sharedInstance.currentAnswerSet?.append(0)
+            }
             let navigationController : UINavigationController = segue.destinationViewController as! UINavigationController
             
             let phq9TestViewController : PHQ_9TestViewController = navigationController.viewControllers[0] as! PHQ_9TestViewController
@@ -37,6 +42,12 @@ class LeftMenuTableViewController: UITableViewController {
         }
         else if(segue.identifier == "gad7"){
             print("hello2")
+            DataSource.sharedInstance.currentQuestionSet = DataSource.sharedInstance.gad7Questions
+            DataSource.sharedInstance.currentAnswerSet = [Int]()
+            for (var i = 0; i < DataSource.sharedInstance.currentQuestionSet?.count; i++){
+                DataSource.sharedInstance.currentAnswerSet?.append(0)
+            }
+            
             let navigationController : UINavigationController = segue.destinationViewController as! UINavigationController
             
             let phq9TestViewController : PHQ_9TestViewController = navigationController.viewControllers[0] as! PHQ_9TestViewController
