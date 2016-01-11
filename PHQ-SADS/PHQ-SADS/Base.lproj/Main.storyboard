@@ -81,7 +81,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="FSa-iF-2Vr" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ZwC-Ns-maj"/>
+                                            <segue destination="FSa-iF-2Vr" kind="custom" identifier="phq9" customClass="SWRevealViewControllerSeguePushController" id="ZwC-Ns-maj"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sqa-qN-dH2">
@@ -104,7 +104,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="FSa-iF-2Vr" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="hGD-9j-jbJ"/>
+                                            <segue destination="FSa-iF-2Vr" kind="custom" identifier="gad7" customClass="SWRevealViewControllerSeguePushController" id="hGD-9j-jbJ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MaP-5W-Vf6">
@@ -126,6 +126,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="FSa-iF-2Vr" kind="custom" identifier="phq15" customClass="SWRevealViewControllerSeguePushController" id="r8u-r4-9R2"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eWG-0D-62Q">
                                         <rect key="frame" x="0.0" y="176" width="600" height="44"/>
@@ -744,7 +747,7 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
         <!--Test View Controller-->
         <scene sceneID="tF6-an-pBa">
             <objects>
-                <viewController id="qx3-bN-uPT" customClass="PHQ_9TestViewController" customModule="PHQ_SADS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qx3-bN-uPT" customClass="TestViewController" customModule="PHQ_SADS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oKA-bI-28k"/>
                         <viewControllerLayoutGuide type="bottom" id="VaH-ZW-aoN"/>
@@ -1050,8 +1053,8 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
         <image name="test" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GhM-6C-WoB"/>
-        <segue reference="ZwC-Ns-maj"/>
         <segue reference="YTY-m2-fmw"/>
+        <segue reference="r8u-r4-9R2"/>
+        <segue reference="GhM-6C-WoB"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -34,6 +34,11 @@ class ResultViewController: UIViewController {
             // User can swipe the content area to activate the sidebar as well
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        //result array
+        for i in DataSource.sharedInstance.currentAnswerSet! {
+            print(i)
+        }
     }
 
     override func didReceiveMemoryWarning() {
