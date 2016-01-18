@@ -29,41 +29,30 @@ class LeftMenuTableViewController: UITableViewController {
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "phq9") {
-            //print("phq9")
-            DataSource.sharedInstance.currentQuestionSet = DataSource.sharedInstance.phq9Questions
-            DataSource.sharedInstance.currentAnswerSet = [Int]()
-            for (var i = 0; i < DataSource.sharedInstance.currentQuestionSet?.count; i++) {
-                DataSource.sharedInstance.currentAnswerSet?.append(0)
+        
+        if (segue.identifier == "phq9" || segue.identifier == "gad7" || segue.identifier == "phq15") {
+            if (segue.identifier == "phq9") {
+                
+                DataSource.sharedInstance.currentTest = DataSource.sharedInstance.phq9Test
+                
+            } else if (segue.identifier == "gad7") {
+                
+                DataSource.sharedInstance.currentTest = DataSource.sharedInstance.gad7Test
+                
+            } else if (segue.identifier == "phq15") {
+                
+                DataSource.sharedInstance.currentTest = DataSource.sharedInstance.phq15Test
             }
-            let navigationController: UINavigationController = segue.destinationViewController as! UINavigationController
-            let phq9TestViewController: TestViewController = navigationController.viewControllers[0] as! TestViewController
-            phq9TestViewController.pageTitles = DataSource.sharedInstance.phq9Questions
-            phq9TestViewController.title = "PHQ-9"
             
-        } else if (segue.identifier == "gad7") {
-            //print("gad7")
-            DataSource.sharedInstance.currentQuestionSet = DataSource.sharedInstance.gad7Questions
             DataSource.sharedInstance.currentAnswerSet = [Int]()
-            for (var i = 0; i < DataSource.sharedInstance.currentQuestionSet?.count; i++) {
+            for (var i = 0; i < DataSource.sharedInstance.currentTest?.questions.count; i++) {
                 DataSource.sharedInstance.currentAnswerSet?.append(0)
             }
-            let navigationController: UINavigationController = segue.destinationViewController as! UINavigationController
-            let gad7TestViewController: TestViewController = navigationController.viewControllers[0] as! TestViewController
-            gad7TestViewController.pageTitles = DataSource.sharedInstance.gad7Questions
-            gad7TestViewController.title = "GAD-7"
             
-        } else if (segue.identifier == "phq15") {
-            //print("phq15")
-            DataSource.sharedInstance.currentQuestionSet = DataSource.sharedInstance.phq15Questions
-            DataSource.sharedInstance.currentAnswerSet = [Int]()
-            for (var i = 0; i < DataSource.sharedInstance.currentQuestionSet?.count; i++) {
-                DataSource.sharedInstance.currentAnswerSet?.append(0)
-            }
             let navigationController: UINavigationController = segue.destinationViewController as! UINavigationController
-            let phq15TestViewController: TestViewController = navigationController.viewControllers[0] as! TestViewController
-            phq15TestViewController.pageTitles = DataSource.sharedInstance.phq15Questions
-            phq15TestViewController.title = "PHQ-15"
+            let testViewController: TestViewController = navigationController.viewControllers[0] as! TestViewController
+            testViewController.pageTitles = DataSource.sharedInstance.currentTest!.questions
+            testViewController.title = DataSource.sharedInstance.currentTest?.title
         }
 
     }

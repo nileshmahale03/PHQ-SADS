@@ -51,6 +51,8 @@ class TestViewController: UIViewController, UIPageViewControllerDataSource {
             self.view.addSubview(self.pageViewController.view)
             self.pageViewController.didMoveToParentViewController(self)
             
+            self.pageViewController.view.userInteractionEnabled = true
+            
         }
     }
 
@@ -79,6 +81,7 @@ class TestViewController: UIViewController, UIPageViewControllerDataSource {
         }
         
         index--
+        
         return self.viewControllerAtIndex(index)
         
     }

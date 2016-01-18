@@ -45,17 +45,17 @@ class ResultViewController: UIViewController {
         if let currentAnswerSet = DataSource.sharedInstance.currentAnswerSet {
             switch currentAnswerSet.reduce(0, combine: +) {
             case 0...4:
-                diagnosisLabel.text = "Minimal Depression"
+                diagnosisLabel.text = DataSource.sharedInstance.currentTest?.diagnosis[0]
             case 5...9:
-                diagnosisLabel.text = "Mild depression"
+                diagnosisLabel.text = DataSource.sharedInstance.currentTest?.diagnosis[1]
             case 10...14:
-                diagnosisLabel.text = "Moderate depression"
+                diagnosisLabel.text = DataSource.sharedInstance.currentTest?.diagnosis[2]
             case 15...19:
-                diagnosisLabel.text = "Moderately severe depression"
+                diagnosisLabel.text = DataSource.sharedInstance.currentTest?.diagnosis[3]
             case 20...27:
-                diagnosisLabel.text = "Severe depression"
+                diagnosisLabel.text = DataSource.sharedInstance.currentTest?.diagnosis[4]
             default:
-                diagnosisLabel.text = "Diagnosis"
+                diagnosisLabel.text = DataSource.sharedInstance.currentTest?.diagnosis[5]
             }
         }
         

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		270C1B2E1C3838A400BB9176 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270C1B2D1C3838A400BB9176 /* SWRevealViewController.m */; };
+		272F5F791C4C760B003BE5FE /* PHQTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F5F781C4C760B003BE5FE /* PHQTest.swift */; };
 		275BEE181C43493800F416CA /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BEE171C43493800F416CA /* DataSource.swift */; };
 		2796C6671C4198ED00989DCE /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796C6661C4198ED00989DCE /* ContentViewController.swift */; };
 		27EEDE7C1C36E98600A6CC62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE7B1C36E98600A6CC62 /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 		270C1B2B1C3838A300BB9176 /* PHQ-SADS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PHQ-SADS-Bridging-Header.h"; sourceTree = "<group>"; };
 		270C1B2C1C3838A400BB9176 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		270C1B2D1C3838A400BB9176 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		272F5F781C4C760B003BE5FE /* PHQTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHQTest.swift; sourceTree = "<group>"; };
 		275BEE171C43493800F416CA /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		2796C6661C4198ED00989DCE /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		27EEDE781C36E98600A6CC62 /* PHQ-SADS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PHQ-SADS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +72,7 @@
 		275BEE191C43493E00F416CA /* Data Source */ = {
 			isa = PBXGroup;
 			children = (
+				272F5F781C4C760B003BE5FE /* PHQTest.swift */,
 				275BEE171C43493800F416CA /* DataSource.swift */,
 			);
 			name = "Data Source";
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272F5F791C4C760B003BE5FE /* PHQTest.swift in Sources */,
 				270C1B2E1C3838A400BB9176 /* SWRevealViewController.m in Sources */,
 				27EEDE841C36E98600A6CC62 /* PHQ_SADS.xcdatamodeld in Sources */,
 				27EEDE911C3764F300A6CC62 /* TestViewController.swift in Sources */,

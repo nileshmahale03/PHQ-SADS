@@ -68,7 +68,7 @@ class ContentViewController: UIViewController {
             checkedOne = true
             
             // go to result button will appear only at last question
-            if (pageIndex == (DataSource.sharedInstance.currentQuestionSet?.count)! - 1) {
+            if (pageIndex == (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
                 goToResultButton.hidden = false
             }
         } else if (checkedOne == true) {
@@ -99,7 +99,7 @@ class ContentViewController: UIViewController {
             
             checkedTwo = true
             
-            if (pageIndex == (DataSource.sharedInstance.currentQuestionSet?.count)! - 1) {
+            if (pageIndex == (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
                 goToResultButton.hidden = false
             }
         } else if (checkedTwo == true) {
@@ -130,7 +130,7 @@ class ContentViewController: UIViewController {
             
             checkedThree = true
             
-            if (pageIndex == (DataSource.sharedInstance.currentQuestionSet?.count)! - 1) {
+            if (pageIndex == (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
                 goToResultButton.hidden = false
             }
         } else if (checkedThree == true) {
@@ -161,7 +161,7 @@ class ContentViewController: UIViewController {
             
             checkedFour = true
             
-            if (pageIndex == (DataSource.sharedInstance.currentQuestionSet?.count)! - 1) {
+            if (pageIndex == (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
                 goToResultButton.hidden = false
             }
         } else if (checkedFour == true) {
