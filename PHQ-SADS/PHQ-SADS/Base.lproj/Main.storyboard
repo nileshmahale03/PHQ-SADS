@@ -620,7 +620,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4/27" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXI-Xa-Qd5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXI-Xa-Qd5">
                                 <rect key="frame" x="20" y="269" width="560" height="82"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="60"/>
                                 <color key="textColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -647,36 +647,35 @@
                                 <color key="textColor" red="0.90588235289999997" green="0.37254901959999998" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimal Depression" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkM-5l-MHG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diagnosis" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkM-5l-MHG">
                                 <rect key="frame" x="20" y="144" width="560" height="36"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="26"/>
                                 <color key="textColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The score suggests the patient may not need depression treatment" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3A-Gd-Cmg">
-                                <rect key="frame" x="20" y="433" width="560" height="93"/>
-                                <color key="textColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interpreting PHQ Scores" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEy-UQ-WO9">
+                                <rect key="frame" x="20" y="453" width="560" height="36"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <color key="textColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="PF2-Gm-4eO" firstAttribute="leading" secondItem="bXI-Xa-Qd5" secondAttribute="leading" id="09H-L1-oy7"/>
                             <constraint firstItem="bXI-Xa-Qd5" firstAttribute="top" secondItem="PF2-Gm-4eO" secondAttribute="bottom" constant="13" id="1YO-le-fvL"/>
+                            <constraint firstItem="DEy-UQ-WO9" firstAttribute="leading" secondItem="aSO-xn-eZr" secondAttribute="leading" id="2zc-Wk-3mo"/>
                             <constraint firstItem="KkM-5l-MHG" firstAttribute="leading" secondItem="6bE-V2-P9F" secondAttribute="leading" id="B64-Ex-SLD"/>
                             <constraint firstItem="PF2-Gm-4eO" firstAttribute="top" secondItem="KkM-5l-MHG" secondAttribute="bottom" constant="40" id="DBR-dq-2gw"/>
+                            <constraint firstItem="DEy-UQ-WO9" firstAttribute="trailing" secondItem="bXI-Xa-Qd5" secondAttribute="trailing" id="Iwv-MV-V9T"/>
                             <constraint firstItem="KkM-5l-MHG" firstAttribute="trailing" secondItem="bXI-Xa-Qd5" secondAttribute="trailing" id="MSp-qo-zGM"/>
                             <constraint firstItem="PF2-Gm-4eO" firstAttribute="leading" secondItem="KkM-5l-MHG" secondAttribute="leading" id="MvM-Dy-MqM"/>
                             <constraint firstItem="aSO-xn-eZr" firstAttribute="top" secondItem="bXI-Xa-Qd5" secondAttribute="bottom" constant="30" id="Pxo-ey-5rj"/>
                             <constraint firstItem="KkM-5l-MHG" firstAttribute="top" secondItem="6bE-V2-P9F" secondAttribute="bottom" constant="36" id="Scu-I1-NXI"/>
                             <constraint firstItem="bXI-Xa-Qd5" firstAttribute="leading" secondItem="aSO-xn-eZr" secondAttribute="leading" id="V6w-iK-Rxz"/>
-                            <constraint firstItem="X3A-Gd-Cmg" firstAttribute="top" secondItem="aSO-xn-eZr" secondAttribute="bottom" constant="16" id="VRu-Se-PLE"/>
-                            <constraint firstItem="bXI-Xa-Qd5" firstAttribute="trailing" secondItem="X3A-Gd-Cmg" secondAttribute="trailing" id="Zpe-i1-dQI"/>
+                            <constraint firstItem="DEy-UQ-WO9" firstAttribute="top" secondItem="aSO-xn-eZr" secondAttribute="bottom" constant="36" id="WC3-uA-6lT"/>
                             <constraint firstItem="bXI-Xa-Qd5" firstAttribute="trailing" secondItem="Hkz-Fr-6Pi" secondAttribute="trailingMargin" id="qQR-eh-H3z"/>
                             <constraint firstItem="PF2-Gm-4eO" firstAttribute="leading" secondItem="Hkz-Fr-6Pi" secondAttribute="leadingMargin" id="qzJ-Mj-UPl"/>
-                            <constraint firstItem="aSO-xn-eZr" firstAttribute="leading" secondItem="X3A-Gd-Cmg" secondAttribute="leading" id="rHo-ba-tUQ"/>
-                            <constraint firstItem="XMl-7R-WtG" firstAttribute="top" secondItem="X3A-Gd-Cmg" secondAttribute="bottom" constant="74" id="rao-cl-PH3"/>
                             <constraint firstItem="6bE-V2-P9F" firstAttribute="top" secondItem="fE2-xS-sfj" secondAttribute="bottom" constant="8" symbolic="YES" id="uHj-NX-HSl"/>
                         </constraints>
                     </view>
@@ -685,8 +684,11 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="organize" id="2PN-Du-ZpI"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="actionLabel" destination="DEy-UQ-WO9" id="9fp-pQ-vGy"/>
+                        <outlet property="diagnosisLabel" destination="KkM-5l-MHG" id="xKH-jw-4WA"/>
                         <outlet property="menuBarButton" destination="cnw-Sz-2g4" id="2Zl-jg-S99"/>
                         <outlet property="organizeBarButton" destination="2PN-Du-ZpI" id="f7j-Bv-kb5"/>
+                        <outlet property="scoreLabel" destination="bXI-Xa-Qd5" id="bXM-UU-uFX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6uO-nY-rQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -885,15 +887,6 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                                     <segue destination="kMU-pB-70w" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="GhM-6C-WoB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKI-hc-weV">
-                                <rect key="frame" x="20" y="559" width="47" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="47" id="e3s-as-YHT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -901,7 +894,6 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                             <constraint firstItem="bfD-GD-x9N" firstAttribute="bottom" secondItem="Vlz-gs-4Dn" secondAttribute="bottom" id="1ag-3j-xJG"/>
                             <constraint firstItem="jVj-Q6-cB4" firstAttribute="top" secondItem="iq6-3B-q3k" secondAttribute="top" id="2Iy-lM-cgR"/>
                             <constraint firstItem="Vlz-gs-4Dn" firstAttribute="top" secondItem="2Wc-G4-IxF" secondAttribute="bottom" constant="42" id="3cL-na-iqd"/>
-                            <constraint firstItem="qKI-hc-weV" firstAttribute="leading" secondItem="jVj-Q6-cB4" secondAttribute="leading" id="400-rh-OwF"/>
                             <constraint firstItem="NpX-IB-8wI" firstAttribute="leading" secondItem="Vlz-gs-4Dn" secondAttribute="leading" id="4e4-7J-aMB"/>
                             <constraint firstItem="WXw-bv-G3m" firstAttribute="trailing" secondItem="jVj-Q6-cB4" secondAttribute="trailing" id="7j0-Td-JlZ"/>
                             <constraint firstItem="WXw-bv-G3m" firstAttribute="top" secondItem="NpX-IB-8wI" secondAttribute="bottom" constant="8" symbolic="YES" id="8Rr-r4-fnu"/>
@@ -909,14 +901,12 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                             <constraint firstItem="NpX-IB-8wI" firstAttribute="top" secondItem="G9J-MT-U49" secondAttribute="top" id="AYk-y4-eXs"/>
                             <constraint firstItem="qjH-bs-HXr" firstAttribute="top" secondItem="WXw-bv-G3m" secondAttribute="top" id="CLF-ar-eOj"/>
                             <constraint firstItem="jVj-Q6-cB4" firstAttribute="leading" secondItem="WXw-bv-G3m" secondAttribute="leading" id="HRY-PU-i1U"/>
-                            <constraint firstItem="qKI-hc-weV" firstAttribute="bottom" secondItem="AKi-Mj-pKT" secondAttribute="bottom" id="MVd-qY-81G"/>
                             <constraint firstItem="WXw-bv-G3m" firstAttribute="trailing" secondItem="NpX-IB-8wI" secondAttribute="trailing" id="TpL-15-Nqv"/>
                             <constraint firstItem="AKi-Mj-pKT" firstAttribute="trailing" secondItem="2Wc-G4-IxF" secondAttribute="trailing" id="VML-Wi-FO9"/>
                             <constraint firstItem="Vlz-gs-4Dn" firstAttribute="leading" secondItem="pvv-x2-djS" secondAttribute="leadingMargin" id="XQo-2b-U09"/>
                             <constraint firstAttribute="bottom" secondItem="AKi-Mj-pKT" secondAttribute="bottom" constant="20" symbolic="YES" id="XYJ-0U-H4D"/>
                             <constraint firstItem="G9J-MT-U49" firstAttribute="leading" secondItem="bfD-GD-x9N" secondAttribute="leading" id="YLl-VR-5YK"/>
                             <constraint firstItem="G9J-MT-U49" firstAttribute="trailing" secondItem="bfD-GD-x9N" secondAttribute="trailing" id="Zes-WZ-7hN"/>
-                            <constraint firstItem="qKI-hc-weV" firstAttribute="top" secondItem="jVj-Q6-cB4" secondAttribute="bottom" constant="44" id="bbL-qS-X2R"/>
                             <constraint firstItem="bfD-GD-x9N" firstAttribute="leading" secondItem="Vlz-gs-4Dn" secondAttribute="trailing" constant="16" id="djp-ls-5be"/>
                             <constraint firstItem="qjH-bs-HXr" firstAttribute="leading" secondItem="G9J-MT-U49" secondAttribute="leading" id="dpY-eo-ebX"/>
                             <constraint firstItem="jVj-Q6-cB4" firstAttribute="bottom" secondItem="iq6-3B-q3k" secondAttribute="bottom" id="eGe-9r-mff"/>
@@ -945,7 +935,6 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                         <outlet property="optionLabelThree" destination="qjH-bs-HXr" id="aWp-vd-mN5"/>
                         <outlet property="optionLabelTwo" destination="G9J-MT-U49" id="mmr-MW-bwy"/>
                         <outlet property="questionLabel" destination="2Wc-G4-IxF" id="mw4-je-QEu"/>
-                        <outlet property="totalScore" destination="qKI-hc-weV" id="mlJ-0J-MFg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Md6-rW-0LS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1055,6 +1044,6 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
     <inferredMetricsTieBreakers>
         <segue reference="YTY-m2-fmw"/>
         <segue reference="r8u-r4-9R2"/>
-        <segue reference="GhM-6C-WoB"/>
+        <segue reference="e3J-w9-Nr3"/>
     </inferredMetricsTieBreakers>
 </document>

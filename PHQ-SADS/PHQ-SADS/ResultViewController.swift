@@ -12,6 +12,12 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     @IBOutlet weak var organizeBarButton: UIBarButtonItem!
+    
+    @IBOutlet var diagnosisLabel: UILabel!
+    
+    @IBOutlet var scoreLabel: UILabel!
+    
+    @IBOutlet var actionLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +41,41 @@ class ResultViewController: UIViewController {
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        //result array
-        for i in DataSource.sharedInstance.currentAnswerSet! {
-            print(i)
+        //diagnosis
+        if let currentAnswerSet = DataSource.sharedInstance.currentAnswerSet {
+            switch currentAnswerSet.reduce(0, combine: +) {
+            case 0...4:
+                diagnosisLabel.text = "Minimal Depression"
+            case 5...9:
+                diagnosisLabel.text = "Mild depression"
+            case 10...14:
+                diagnosisLabel.text = "Moderate depression"
+            case 15...19:
+                diagnosisLabel.text = "Moderately severe depression"
+            case 20...27:
+                diagnosisLabel.text = "Severe depression"
+            default:
+                diagnosisLabel.text = "Diagnosis"
+            }
+        }
+        
+        //score
+        if let currentAnswerSet = DataSource.sharedInstance.currentAnswerSet {
+            scoreLabel.text = String(currentAnswerSet.reduce(0, combine: +))
+        }
+        
+        //action
+        if let currentAnswerSet = DataSource.sharedInstance.currentAnswerSet {
+            switch currentAnswerSet.reduce(0, combine: +) {
+            case 0...4:
+                actionLabel.text = "The score suggests the patient may not need depression treatment"
+            case 5...14:
+                actionLabel.text = "Physician uses clinical judgment about treatment, based on patient's duration of symptoms and functional impairment"
+            case 15...27:
+                actionLabel.text = "Warrants treatment for depression, using antidepressant, psychotherapy and/or a combination of treatment"
+            default:
+                actionLabel.text = "Action"
+            }
         }
     }
 

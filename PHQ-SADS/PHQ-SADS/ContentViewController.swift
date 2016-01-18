@@ -36,9 +36,7 @@ class ContentViewController: UIViewController {
     //go to result button
     @IBOutlet weak var goToResultButton: UIButton!
     
-    //score label
-    @IBOutlet var totalScore: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,6 +44,7 @@ class ContentViewController: UIViewController {
         goToResultButton.hidden = true
         
         self.questionLabel.text = self.titleText
+        
     }
     
     // This is what will happen when user clicks 1st button
@@ -54,7 +53,7 @@ class ContentViewController: UIViewController {
         if (checkedOne == false) {
             
             //score
-            DataSource.sharedInstance.currentAnswerSet![pageIndex] = 1
+            DataSource.sharedInstance.currentAnswerSet![pageIndex] = 0
             
             checkBoxButtonOne.setImage(UIImage(named: "markedCheckBox"), forState: .Normal)
             checkBoxButtonTwo.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
@@ -86,7 +85,7 @@ class ContentViewController: UIViewController {
     @IBAction func checkBoxActionTwo(sender: UIButton) {
         if (checkedTwo == false) {
             
-            DataSource.sharedInstance.currentAnswerSet![pageIndex] = 2
+            DataSource.sharedInstance.currentAnswerSet![pageIndex] = 1
             
             checkBoxButtonOne.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
             checkBoxButtonTwo.setImage(UIImage(named: "markedCheckBox"), forState: .Normal)
@@ -117,7 +116,7 @@ class ContentViewController: UIViewController {
     @IBAction func checkBoxActionThree(sender: UIButton) {
         if (checkedThree == false) {
             
-            DataSource.sharedInstance.currentAnswerSet![pageIndex] = 3
+            DataSource.sharedInstance.currentAnswerSet![pageIndex] = 2
             
             checkBoxButtonOne.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
             checkBoxButtonTwo.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
@@ -148,7 +147,7 @@ class ContentViewController: UIViewController {
     @IBAction func checkBoxActionFour(sender: UIButton) {
         if (checkedFour == false) {
             
-            DataSource.sharedInstance.currentAnswerSet![pageIndex] = 4
+            DataSource.sharedInstance.currentAnswerSet![pageIndex] = 3
             
             checkBoxButtonOne.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
             checkBoxButtonTwo.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)

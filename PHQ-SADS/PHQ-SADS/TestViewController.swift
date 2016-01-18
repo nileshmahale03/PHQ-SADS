@@ -88,11 +88,9 @@ class TestViewController: UIViewController, UIPageViewControllerDataSource {
         let viewController = viewController as! ContentViewController
         var index = viewController.pageIndex as Int
         
-        if (index ==  NSNotFound) {
+        if (index == NSNotFound) {
             return nil
         }
-        
-        
         
         index++
         
@@ -119,7 +117,4 @@ class TestViewController: UIViewController, UIPageViewControllerDataSource {
         
     }
     
-
-
-
 }
