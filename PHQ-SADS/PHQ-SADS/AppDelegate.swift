@@ -23,6 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pageController.pageIndicatorTintColor = UIColor.whiteColor()
         pageController.currentPageIndicatorTintColor = UIColor(colorLiteralRed: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1)
         pageController.backgroundColor = UIColor(colorLiteralRed: 240.0/255.0, green: 242.0/255.0, blue: 243.0/255.0, alpha: 1)
+
+        let fetchRequest = NSFetchRequest(entityName: "History")
+        
+        do {
+            if let results = try managedObjectContext.executeFetchRequest(fetchRequest) as? [NSManagedObject] {
+                for result in results {
+                    if let test = result.valueForKey("test") as? String, score = result.valueForKey("score") as? String, date = result.valueForKey("date") as? String {
+                        print("Got \(test) \(score) \(date)")
+                    }
+                }
+            }
+        } catch {
+            print("There was a fetch error!")
+        }
         
         return true
     }

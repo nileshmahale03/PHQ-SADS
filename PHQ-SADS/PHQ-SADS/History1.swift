@@ -8,7 +8,7 @@
 
 import UIKit
 
-class History: NSObject {
+class History1: NSObject {
     
     var date:String = ""
     var test:String = ""
