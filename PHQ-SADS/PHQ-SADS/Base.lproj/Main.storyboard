@@ -372,7 +372,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="g3J-5d-SCN" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="6Zl-FV-SvN"/>
+                                            <segue destination="NtR-I9-5vA" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="bfh-fI-l1P"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="muq-zW-fRd">
@@ -409,7 +409,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="AHv-zn-1nk" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="foF-WK-FXW"/>
+                                            <segue destination="AHv-zn-1nk" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="9XD-am-n6B"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -582,32 +582,6 @@
             </objects>
             <point key="canvasLocation" x="2529" y="3041"/>
         </scene>
-        <!--History View Controller-->
-        <scene sceneID="695-ZN-KBi">
-            <objects>
-                <viewController id="Lrc-3f-5vA" customClass="HistoryViewController" customModule="PHQ_SADS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eiY-iP-cLv"/>
-                        <viewControllerLayoutGuide type="bottom" id="mMr-5t-dWG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="n7j-tE-Lxj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="fnr-5D-4il">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="Ij6-C4-GGW"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="YdU-Y6-mcA"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="menuBarButton" destination="Ij6-C4-GGW" id="aXl-s9-z8B"/>
-                        <outlet property="organizeBarButton" destination="YdU-Y6-mcA" id="zg5-Uk-jTW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="44C-ba-Saw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2529" y="2367"/>
-        </scene>
         <!--Result View Controller-->
         <scene sceneID="dmm-gN-T7s">
             <objects>
@@ -694,6 +668,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6uO-nY-rQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2529" y="1693"/>
+        </scene>
+        <!--History Table View Controller-->
+        <scene sceneID="f9X-Ng-C21">
+            <objects>
+                <tableViewController id="3Bs-Tl-VyK" customClass="HistoryTableViewController" customModule="PHQ_SADS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Ie-er-jxh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" rowHeight="140" id="9Dn-Nl-nIV" customClass="HistoryTableViewCell" customModule="PHQ_SADS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="140"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Dn-Nl-nIV" id="o5P-ZY-LAs">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="139.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEp-1a-S1T">
+                                            <rect key="frame" x="16" y="9" width="569" height="38"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="26"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIk-XE-hsq">
+                                            <rect key="frame" x="16" y="54" width="569" height="36"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="26"/>
+                                            <color key="textColor" red="0.90588235289999997" green="0.37254901959999998" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbB-4X-Zf7">
+                                            <rect key="frame" x="16" y="95" width="569" height="36"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="26"/>
+                                            <color key="textColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dateLabel" destination="JEp-1a-S1T" id="2Ao-T4-BEo"/>
+                                    <outlet property="scoreLabel" destination="gbB-4X-Zf7" id="uR9-bU-7J5"/>
+                                    <outlet property="testLabel" destination="pIk-XE-hsq" id="Z9E-bW-ImW"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3Bs-Tl-VyK" id="AzX-Rn-1nT"/>
+                            <outlet property="delegate" destination="3Bs-Tl-VyK" id="sq5-bk-mzc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="FsC-Qi-Eou">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="ogb-XB-QLH"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="hqY-Hw-Cfc"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuBarButton" destination="ogb-XB-QLH" id="vzB-0F-wHr"/>
+                        <outlet property="organizeBarButton" destination="hqY-Hw-Cfc" id="lbs-bR-6xc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EgU-va-DNH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2529" y="2363"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="35p-3d-0NZ">
@@ -978,24 +1016,6 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
             <point key="canvasLocation" x="1717" y="1693"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="wh3-zv-2gK">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g3J-5d-SCN" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x63-LE-nV7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Lrc-3f-5vA" kind="relationship" relationship="rootViewController" id="xHb-8p-vkN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OMf-6s-VbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1717" y="2367"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="o4u-3m-fX1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AHv-zn-1nk" sceneMemberID="viewController">
@@ -1031,6 +1051,24 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
             </objects>
             <point key="canvasLocation" x="1717" y="328"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vFK-aW-9jk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NtR-I9-5vA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cZU-Jc-aQl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3Bs-Tl-VyK" kind="relationship" relationship="rootViewController" id="9x6-u9-bMF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XVF-Kv-3iK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="2363"/>
+        </scene>
     </scenes>
     <resources>
         <image name="blankedCheckBox" width="64" height="64"/>
@@ -1042,8 +1080,8 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
         <image name="test" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YTY-m2-fmw"/>
         <segue reference="r8u-r4-9R2"/>
+        <segue reference="YTY-m2-fmw"/>
         <segue reference="e3J-w9-Nr3"/>
     </inferredMetricsTieBreakers>
 </document>
