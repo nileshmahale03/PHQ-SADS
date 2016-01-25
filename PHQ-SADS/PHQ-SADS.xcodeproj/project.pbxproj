@@ -11,11 +11,10 @@
 		272F5F791C4C760B003BE5FE /* PHQTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F5F781C4C760B003BE5FE /* PHQTest.swift */; };
 		27521BAE1C5486DD00E76F06 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27521BAD1C5486DD00E76F06 /* HistoryTableViewController.swift */; };
 		27521BB01C548EBB00E76F06 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27521BAF1C548EBB00E76F06 /* HistoryTableViewCell.swift */; };
-		27521BB21C54952400E76F06 /* History1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27521BB11C54952400E76F06 /* History1.swift */; };
 		275BEE181C43493800F416CA /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BEE171C43493800F416CA /* DataSource.swift */; };
 		2796C6671C4198ED00989DCE /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796C6661C4198ED00989DCE /* ContentViewController.swift */; };
-		27E0B3201C555E8500BD3752 /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0B31E1C555E8500BD3752 /* History+CoreDataProperties.swift */; };
-		27E0B3211C555E8500BD3752 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0B31F1C555E8500BD3752 /* History.swift */; };
+		27E0B3241C55923E00BD3752 /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0B3221C55923E00BD3752 /* History+CoreDataProperties.swift */; };
+		27E0B3251C55923E00BD3752 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0B3231C55923E00BD3752 /* History.swift */; };
 		27EEDE7C1C36E98600A6CC62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE7B1C36E98600A6CC62 /* AppDelegate.swift */; };
 		27EEDE811C36E98600A6CC62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27EEDE7F1C36E98600A6CC62 /* Main.storyboard */; };
 		27EEDE841C36E98600A6CC62 /* PHQ_SADS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27EEDE821C36E98600A6CC62 /* PHQ_SADS.xcdatamodeld */; };
@@ -36,11 +35,10 @@
 		272F5F781C4C760B003BE5FE /* PHQTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHQTest.swift; sourceTree = "<group>"; };
 		27521BAD1C5486DD00E76F06 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		27521BAF1C548EBB00E76F06 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
-		27521BB11C54952400E76F06 /* History1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History1.swift; sourceTree = "<group>"; };
 		275BEE171C43493800F416CA /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		2796C6661C4198ED00989DCE /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
-		27E0B31E1C555E8500BD3752 /* History+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "History+CoreDataProperties.swift"; path = "../History+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		27E0B31F1C555E8500BD3752 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = History.swift; path = ../History.swift; sourceTree = "<group>"; };
+		27E0B3221C55923E00BD3752 /* History+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "History+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		27E0B3231C55923E00BD3752 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		27EEDE781C36E98600A6CC62 /* PHQ-SADS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PHQ-SADS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27EEDE7B1C36E98600A6CC62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27EEDE801C36E98600A6CC62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 			children = (
 				272F5F781C4C760B003BE5FE /* PHQTest.swift */,
 				275BEE171C43493800F416CA /* DataSource.swift */,
-				27521BB11C54952400E76F06 /* History1.swift */,
 			);
 			name = "Data Source";
 			sourceTree = "<group>";
@@ -154,8 +151,8 @@
 		27EEDE9B1C37664100A6CC62 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				27E0B31E1C555E8500BD3752 /* History+CoreDataProperties.swift */,
-				27E0B31F1C555E8500BD3752 /* History.swift */,
+				27E0B3221C55923E00BD3752 /* History+CoreDataProperties.swift */,
+				27E0B3231C55923E00BD3752 /* History.swift */,
 				27EEDE821C36E98600A6CC62 /* PHQ_SADS.xcdatamodeld */,
 			);
 			name = "Core Data";
@@ -232,7 +229,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27E0B3211C555E8500BD3752 /* History.swift in Sources */,
 				272F5F791C4C760B003BE5FE /* PHQTest.swift in Sources */,
 				270C1B2E1C3838A400BB9176 /* SWRevealViewController.m in Sources */,
 				27EEDE841C36E98600A6CC62 /* PHQ_SADS.xcdatamodeld in Sources */,
@@ -242,13 +238,13 @@
 				27F4D2F61C38A03000D097E0 /* PHQ-SADSViewController.swift in Sources */,
 				27EEDEA11C3766E700A6CC62 /* InfoViewController.swift in Sources */,
 				275BEE181C43493800F416CA /* DataSource.swift in Sources */,
-				27521BB21C54952400E76F06 /* History1.swift in Sources */,
 				27521BB01C548EBB00E76F06 /* HistoryTableViewCell.swift in Sources */,
+				27E0B3251C55923E00BD3752 /* History.swift in Sources */,
 				27EEDEA51C37724E00A6CC62 /* LeftMenuTableViewController.swift in Sources */,
-				27E0B3201C555E8500BD3752 /* History+CoreDataProperties.swift in Sources */,
 				27EEDEA31C37723C00A6CC62 /* RightMenuTableViewController.swift in Sources */,
 				2796C6671C4198ED00989DCE /* ContentViewController.swift in Sources */,
 				27EEDE7C1C36E98600A6CC62 /* AppDelegate.swift in Sources */,
+				27E0B3241C55923E00BD3752 /* History+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

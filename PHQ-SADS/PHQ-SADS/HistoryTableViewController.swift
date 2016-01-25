@@ -14,15 +14,6 @@ class HistoryTableViewController: UITableViewController {
     var managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var history = [History] ()
     
-    var histories:[History1] = [
-        History1(date: "1/20/2016", test: "PHQ-9", score: "3/27"),
-        History1(date: "1/21/2016", test: "PHQ-15", score: "5/27"),
-        History1(date: "1/22/2016", test: "GAD-7", score: "21/27"),
-        History1(date: "1/23/2016", test: "Panic Symptoms", score: "7/27"),
-        History1(date: "1/24/2016", test: "PHQ-9", score: "9/27"),
-        History1(date: "1/25/2016", test: "PHQ-15", score: "13/27"),
-    ]
-    
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     @IBOutlet weak var organizeBarButton: UIBarButtonItem!
     
@@ -74,23 +65,6 @@ class HistoryTableViewController: UITableViewController {
         }
     }
     
-//    override func viewDidAppear(animated: Bool) {
-//        
-//        let fetchRequest = NSFetchRequest(entityName: "History")
-//        
-//        do {
-//            if let results = try managedObjectContext.executeFetchRequest(fetchRequest) as? [NSManagedObject] {
-//                for result in results {
-//                    if let test = result.valueForKey("test") as? String, score = result.valueForKey("score") as? String, date = result.valueForKey("date") as? String {
-//                        print("Got \(test) \(score) \(date)")
-//                    }
-//                }
-//            }
-//        } catch {
-//            print("There was a fetch error!")
-//        }
-//        
-//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -106,7 +80,6 @@ class HistoryTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        //return self.histories.count
         return history.count
     }
 
@@ -115,11 +88,6 @@ class HistoryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("historyCell", forIndexPath: indexPath) as! HistoryTableViewCell
 
         // Configure the cell...
-//        let history = histories[indexPath.row]
-//        cell.dateLabel.text = history.date
-//        cell.testLabel.text = history.test
-//        cell.scoreLabel.text = history.score
-
         let someHistory = history[indexPath.row]
         
         cell.dateLabel.text = someHistory.date

@@ -15,7 +15,7 @@ import CoreData
 extension History {
 
     @NSManaged var date: String
-    @NSManaged var test: String
     @NSManaged var score: String
+    @NSManaged var test: String
 
 }
