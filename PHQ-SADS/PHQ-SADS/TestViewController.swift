@@ -16,6 +16,7 @@ class TestViewController: UIViewController, UIPageViewControllerDataSource {
     
     var pageViewController: UIPageViewController!
     var pageTitles: NSArray!
+    var presentationPageIndex = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +66,9 @@ class TestViewController: UIViewController, UIPageViewControllerDataSource {
         let viewController: ContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ContentViewController") as! ContentViewController
         
         viewController.pageIndex = index
+        
+        self.presentationPageIndex = index
+        
         viewController.titleText = self.pageTitles[index] as! String
         
         return viewController
@@ -73,37 +77,42 @@ class TestViewController: UIViewController, UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
-        let viewController = viewController as! ContentViewController
-        var index = viewController.pageIndex as Int
+//        let viewController = viewController as! ContentViewController
+//        var index = viewController.pageIndex as Int
+//        
+//        if (index == 0 || index == NSNotFound) {
+//            return nil
+//        }
+//        
+//        index--
+//        
+//        return self.viewControllerAtIndex(index)
         
-        if (index == 0 || index == NSNotFound) {
-            return nil
-        }
-        
-        index--
-        
-        return self.viewControllerAtIndex(index)
+        return nil
         
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
-        let viewController = viewController as! ContentViewController
-        var index = viewController.pageIndex as Int
+//        let viewController = viewController as! ContentViewController
+//        var index = viewController.pageIndex as Int
+//        
+//        if (index == NSNotFound) {
+//            return nil
+//        }
+//        
+//        index++
+//        
+//        if (index == self.pageTitles.count) {
+//            return nil
+//        }
+//        
+//        return self.viewControllerAtIndex(index)
         
-        if (index == NSNotFound) {
-            return nil
-        }
-        
-        index++
-        
-        if (index == self.pageTitles.count) {
-            return nil
-        }
-        
-        return self.viewControllerAtIndex(index)
+        return nil
         
     }
+    
     
     // The number of items reflected in the page indicator.
     
@@ -116,7 +125,7 @@ class TestViewController: UIViewController, UIPageViewControllerDataSource {
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         
-        return 0
+        return self.presentationPageIndex
         
     }
     

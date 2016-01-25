@@ -67,6 +67,17 @@ class ContentViewController: UIViewController {
             
             checkedOne = true
             
+            //automatically go to next question
+            if (pageIndex != (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
+                
+                let testViewController: TestViewController = self.parentViewController?.parentViewController as! TestViewController
+                let startViewController = testViewController.viewControllerAtIndex(pageIndex+1) as ContentViewController
+                let viewControllers = NSArray(object: startViewController)
+                
+                testViewController.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
+                
+            }
+            
             // go to result button will appear only at last question
             if (pageIndex == (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
                 goToResultButton.hidden = false
@@ -99,6 +110,17 @@ class ContentViewController: UIViewController {
             
             checkedTwo = true
             
+            //automatically go to next question
+            if (pageIndex != (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
+                
+                let testViewController: TestViewController = self.parentViewController?.parentViewController as! TestViewController
+                let startViewController = testViewController.viewControllerAtIndex(pageIndex+1) as ContentViewController
+                let viewControllers = NSArray(object: startViewController)
+                
+                testViewController.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
+                
+            }
+            
             if (pageIndex == (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
                 goToResultButton.hidden = false
             }
@@ -130,6 +152,17 @@ class ContentViewController: UIViewController {
             
             checkedThree = true
             
+            //automatically go to next question
+            if (pageIndex != (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
+                
+                let testViewController: TestViewController = self.parentViewController?.parentViewController as! TestViewController
+                let startViewController = testViewController.viewControllerAtIndex(pageIndex+1) as ContentViewController
+                let viewControllers = NSArray(object: startViewController)
+                
+                testViewController.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
+                
+            }
+            
             if (pageIndex == (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
                 goToResultButton.hidden = false
             }
@@ -160,6 +193,17 @@ class ContentViewController: UIViewController {
             optionLabelFour.textColor = UIColor(colorLiteralRed: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1)
             
             checkedFour = true
+            
+            //automatically go to next question
+            if (pageIndex != (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
+                
+                let testViewController: TestViewController = self.parentViewController?.parentViewController as! TestViewController
+                let startViewController = testViewController.viewControllerAtIndex(pageIndex+1) as ContentViewController
+                let viewControllers = NSArray(object: startViewController)
+                
+                testViewController.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
+                
+            }
             
             if (pageIndex == (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
                 goToResultButton.hidden = false
