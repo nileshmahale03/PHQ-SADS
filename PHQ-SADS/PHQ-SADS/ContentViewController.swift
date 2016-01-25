@@ -33,6 +33,10 @@ class ContentViewController: UIViewController {
     @IBOutlet weak var optionLabelThree: UILabel!
     @IBOutlet weak var optionLabelFour: UILabel!
     
+    var checkBoxes : [UIButton] = [UIButton]()
+    var optionLabels : [UILabel] = [UILabel]()
+    var checkedBools : [Bool] = [Bool]()
+    
     //go to result button
     @IBOutlet weak var goToResultButton: UIButton!
     
@@ -44,6 +48,10 @@ class ContentViewController: UIViewController {
         goToResultButton.hidden = true
         
         self.questionLabel.text = self.titleText
+        
+        self.checkBoxes = [checkBoxButtonOne, checkBoxButtonTwo, checkBoxButtonThree, checkBoxButtonFour]
+        self.optionLabels = [optionLabelOne, optionLabelTwo, optionLabelThree, optionLabelFour]
+        self.checkedBools = [checkedOne, checkedTwo, checkedThree, checkedFour]
         
     }
     
@@ -172,6 +180,21 @@ class ContentViewController: UIViewController {
             optionLabelFour.textColor = UIColor.lightGrayColor()
             goToResultButton.hidden = true
             checkedFour = false
+        }
+    }
+    
+    func checkBoxAction(buttonClicked: UIButton, score : Int){
+        if (checkedBools[score] == false){
+            
+            DataSource.sharedInstance.currentAnswerSet![pageIndex] = score
+            
+            for (var i = 0; i<4; i++){
+                checkBoxes[i].setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
+                optionLabels[i].textColor = UIColor.lightGrayColor()
+                
+            }
+            
+            checkBoxesc
         }
     }
     
