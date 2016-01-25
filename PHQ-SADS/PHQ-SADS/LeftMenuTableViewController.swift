@@ -46,7 +46,7 @@ class LeftMenuTableViewController: UITableViewController {
             
             DataSource.sharedInstance.currentAnswerSet = [Int]()
             for (var i = 0; i < DataSource.sharedInstance.currentTest?.questions.count; i++) {
-                DataSource.sharedInstance.currentAnswerSet?.append(0)
+                DataSource.sharedInstance.currentAnswerSet?.append(-1)
             }
             
             let navigationController: UINavigationController = segue.destinationViewController as! UINavigationController
