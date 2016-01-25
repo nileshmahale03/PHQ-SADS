@@ -77,37 +77,11 @@ class TestViewController: UIViewController, UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
-//        let viewController = viewController as! ContentViewController
-//        var index = viewController.pageIndex as Int
-//        
-//        if (index == 0 || index == NSNotFound) {
-//            return nil
-//        }
-//        
-//        index--
-//        
-//        return self.viewControllerAtIndex(index)
-        
         return nil
         
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        
-//        let viewController = viewController as! ContentViewController
-//        var index = viewController.pageIndex as Int
-//        
-//        if (index == NSNotFound) {
-//            return nil
-//        }
-//        
-//        index++
-//        
-//        if (index == self.pageTitles.count) {
-//            return nil
-//        }
-//        
-//        return self.viewControllerAtIndex(index)
         
         return nil
         
