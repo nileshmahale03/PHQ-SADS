@@ -30,7 +30,7 @@ class LeftMenuTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if (segue.identifier == "phq9" || segue.identifier == "gad7" || segue.identifier == "phq15") {
+        if (segue.identifier == "phq9" || segue.identifier == "gad7" || segue.identifier == "phq15" || segue.identifier == "panicSymptoms") {
             if (segue.identifier == "phq9") {
                 
                 DataSource.sharedInstance.currentTest = DataSource.sharedInstance.phq9Test
@@ -42,6 +42,10 @@ class LeftMenuTableViewController: UITableViewController {
             } else if (segue.identifier == "phq15") {
                 
                 DataSource.sharedInstance.currentTest = DataSource.sharedInstance.phq15Test
+                
+            } else if (segue.identifier == "panicSymptoms") {
+                
+                DataSource.sharedInstance.currentTest = DataSource.sharedInstance.panicSymptomsTest
             }
             
             DataSource.sharedInstance.currentAnswerSet = [Int]()

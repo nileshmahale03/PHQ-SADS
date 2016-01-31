@@ -149,6 +149,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="FSa-iF-2Vr" kind="custom" identifier="panicSymptoms" customClass="SWRevealViewControllerSeguePushController" id="msX-ii-KzW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -262,7 +265,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kRv-UL-PTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834" y="1011"/>
+            <point key="canvasLocation" x="834" y="1039"/>
         </scene>
         <!--Right Menu Table View Controller-->
         <scene sceneID="dK6-tY-GB3">
@@ -1081,8 +1084,8 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
         <image name="test" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YTY-m2-fmw"/>
-        <segue reference="r8u-r4-9R2"/>
         <segue reference="GhM-6C-WoB"/>
+        <segue reference="msX-ii-KzW"/>
+        <segue reference="YTY-m2-fmw"/>
     </inferredMetricsTieBreakers>
 </document>

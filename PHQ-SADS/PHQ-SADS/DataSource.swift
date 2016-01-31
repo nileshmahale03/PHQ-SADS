@@ -91,6 +91,28 @@ class DataSource: NSObject {
         "Bothered a little",
         "Bothered a lot",
         ""])
+
+    var panicSymptomsTest: PHQTest = PHQTest(
+        questions: [
+            "In the last 4 weeks, have you had an anxiety attack ⎯ suddenly feeling fear or panic?",
+            "Has this ever happened before?",
+            "Do some of these attacks come suddenly out of the blue ⎯ that is, in situations where you don’t expect to be nervous or uncomfortable?",
+            "Do these attacks bother you a lot or are you worried about having another attack?",
+            "During your last bad anxiety attack, did you have symptoms like shortness of breath, sweating, or your heart racing, pounding or skipping?"],
+        diagnosis: [
+            "Minimal anxiety",
+            "Mild anxiety",
+            "Moderate anxiety",
+            "Moderately severe anxiety",
+            "Severe anxiety",
+            "Diagnosis"],
+        title:
+        "Panic Symptoms",
+        options: [
+            "NO",
+            "YES",
+            "",
+            ""])
     
     var currentTest: PHQTest?
     
