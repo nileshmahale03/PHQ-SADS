@@ -16,6 +16,7 @@ class TestViewController: UIViewController, UIPageViewControllerDataSource {
     
     var pageViewController: UIPageViewController!
     var pageTitles: NSArray!
+    var pageOptions: NSArray!
     var presentationPageIndex = 0
 
     override func viewDidLoad() {
@@ -71,16 +72,23 @@ class TestViewController: UIViewController, UIPageViewControllerDataSource {
         
         viewController.titleText = self.pageTitles[index] as! String
         
+        viewController.optionOneText = self.pageOptions[0] as! String
+        viewController.optionTwoText = self.pageOptions[1] as! String
+        viewController.optionThreeText = self.pageOptions[2] as! String
+        viewController.optionFourText = self.pageOptions[3] as! String
+        
         return viewController
         
     }
     
+    //user cannot swipe left
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
         return nil
         
     }
     
+    //user cannot swipe right
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
         return nil
@@ -89,14 +97,12 @@ class TestViewController: UIViewController, UIPageViewControllerDataSource {
     
     
     // The number of items reflected in the page indicator.
-    
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
         
         return self.pageTitles.count
     }
     
     // The selected item reflected in the page indicator.
-    
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         
         return self.presentationPageIndex

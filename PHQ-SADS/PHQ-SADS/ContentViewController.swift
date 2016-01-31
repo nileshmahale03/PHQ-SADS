@@ -16,6 +16,11 @@ class ContentViewController: UIViewController {
     var pageIndex: Int!
     var titleText: String!
     
+    var optionOneText: String!
+    var optionTwoText: String!
+    var optionThreeText: String!
+    var optionFourText: String!
+    
     var checkedOne: Bool = false
     var checkedTwo: Bool = false
     var checkedThree: Bool = false
@@ -30,7 +35,7 @@ class ContentViewController: UIViewController {
     @IBOutlet weak var checkBoxButtonThree: UIButton!
     @IBOutlet weak var checkBoxButtonFour: UIButton!
     
-    //options label
+    //options label 
     @IBOutlet weak var optionLabelOne: UILabel!
     @IBOutlet weak var optionLabelTwo: UILabel!
     @IBOutlet weak var optionLabelThree: UILabel!
@@ -56,6 +61,31 @@ class ContentViewController: UIViewController {
         goToResultButton.hidden = true
         
         self.questionLabel.text = self.titleText
+        
+        self.optionLabelOne.text = self.optionOneText
+        self.optionLabelTwo.text = self.optionTwoText
+        self.optionLabelThree.text = self.optionThreeText
+        self.optionLabelFour.text = self.optionFourText
+        
+        if (optionLabelOne.text == "") {
+            checkBoxButtonOne.hidden = true
+            optionLabelOne.hidden = true
+        }
+        
+        if (optionLabelTwo.text == "") {
+            checkBoxButtonTwo.hidden = true
+            optionLabelTwo.hidden = true
+        }
+        
+        if (optionLabelThree.text == "") {
+            checkBoxButtonThree.hidden = true
+            optionLabelThree.hidden = true
+        }
+        
+        if (optionLabelFour.text == "") {
+            checkBoxButtonFour.hidden = true
+            optionLabelFour.hidden = true
+        }
         
         //initiate check boxes array and option labels array and checked bool array
         checkBoxes = [checkBoxButtonOne, checkBoxButtonTwo, checkBoxButtonThree, checkBoxButtonFour]

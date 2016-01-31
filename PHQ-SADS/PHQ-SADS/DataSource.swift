@@ -29,7 +29,12 @@ class DataSource: NSObject {
         "Severe depression",
         "Diagnosis"],
         title:
-        "PHQ-9")
+        "PHQ-9",
+        options: [
+        "Not at all",
+        "Several days",
+        "More than half the days",
+        "Nearly everyday"])
     
     var gad7Test: PHQTest = PHQTest(
         questions: [
@@ -48,7 +53,12 @@ class DataSource: NSObject {
         "Severe anxiety",
         "Diagnosis"],
         title:
-        "GAD-7")
+        "GAD-7",
+        options: [
+        "Not at all",
+        "Several days",
+        "More than half the days",
+        "Nearly everyday"])
     
     var phq15Test: PHQTest = PHQTest(
         questions: [
@@ -75,7 +85,12 @@ class DataSource: NSObject {
         "Severe Anxiety",
         "Diagnosis"],
         title:
-        "PHQ-15")
+        "PHQ-15",
+        options: [
+        "Not bothered",
+        "Bothered a little",
+        "Bothered a lot",
+        ""])
     
     var currentTest: PHQTest?
     

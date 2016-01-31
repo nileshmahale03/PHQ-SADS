@@ -52,6 +52,7 @@ class LeftMenuTableViewController: UITableViewController {
             let navigationController: UINavigationController = segue.destinationViewController as! UINavigationController
             let testViewController: TestViewController = navigationController.viewControllers[0] as! TestViewController
             testViewController.pageTitles = DataSource.sharedInstance.currentTest!.questions
+            testViewController.pageOptions = DataSource.sharedInstance.currentTest!.options
             testViewController.title = DataSource.sharedInstance.currentTest?.title
         }
 
