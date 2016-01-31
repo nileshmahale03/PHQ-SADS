@@ -39,6 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("There was a fetch error!")
         }
         
+        //
+        print(NSDate())
+        
         return true
     }
 

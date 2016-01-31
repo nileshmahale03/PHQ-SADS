@@ -36,6 +36,15 @@ class ContentViewController: UIViewController {
     //go to result button
     @IBOutlet weak var goToResultButton: UIButton!
     
+    //check box button array
+    var checkBoxes: [UIButton] = [UIButton]()
+    
+    //option label array
+    var optionLabels: [UILabel] = [UILabel]()
+    
+    //checked bool
+    var checkedBool: [Bool] = [Bool]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,154 +54,43 @@ class ContentViewController: UIViewController {
         
         self.questionLabel.text = self.titleText
         
+        //initiate check boxes array and option labels array and checked bool array
+        checkBoxes = [checkBoxButtonOne, checkBoxButtonTwo, checkBoxButtonThree, checkBoxButtonFour]
+        
+        optionLabels = [optionLabelOne, optionLabelTwo, optionLabelThree, optionLabelFour]
+        
+        checkedBool = [checkedOne, checkedTwo, checkedThree, checkedFour]
+        
     }
     
     // This is what will happen when user clicks 1st button
     @IBAction func checkBoxActionOne(sender: UIButton) {
-        // if its not selected then select it ; if its already selected then unselect it 
-        if (checkedOne == false) {
-            
-            //score
-            DataSource.sharedInstance.currentAnswerSet![pageIndex] = 0
-            
-            checkBoxButtonOne.setImage(UIImage(named: "markedCheckBox"), forState: .Normal)
-            checkBoxButtonTwo.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            checkBoxButtonThree.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            checkBoxButtonFour.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            
-            optionLabelOne.textColor = UIColor(colorLiteralRed: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1)
-            optionLabelTwo.textColor = UIColor.lightGrayColor()
-            optionLabelThree.textColor = UIColor.lightGrayColor()
-            optionLabelFour.textColor = UIColor.lightGrayColor()
-            
-            checkedOne = true
-            
-            //automatically go to next question
-            if (pageIndex != (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
-                
-                let testViewController: TestViewController = self.parentViewController?.parentViewController as! TestViewController
-                let startViewController = testViewController.viewControllerAtIndex(pageIndex+1) as ContentViewController
-                let viewControllers = NSArray(object: startViewController)
-                
-                testViewController.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
-                
-            }
-            
-            // go to result button will appear only at last question
-            if (pageIndex == (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
-                goToResultButton.hidden = false
-            }
-        } else if (checkedOne == true) {
-            
-            DataSource.sharedInstance.currentAnswerSet![pageIndex] = 0
-            
-            checkBoxButtonOne.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            optionLabelOne.textColor = UIColor.lightGrayColor()
-            goToResultButton.hidden = true
-            checkedOne = false
-        }
+        checkBoxAction(0)
     }
 
     @IBAction func checkBoxActionTwo(sender: UIButton) {
-        if (checkedTwo == false) {
-            
-            DataSource.sharedInstance.currentAnswerSet![pageIndex] = 1
-            
-            checkBoxButtonOne.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            checkBoxButtonTwo.setImage(UIImage(named: "markedCheckBox"), forState: .Normal)
-            checkBoxButtonThree.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            checkBoxButtonFour.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            
-            optionLabelOne.textColor = UIColor.lightGrayColor()
-            optionLabelTwo.textColor = UIColor(colorLiteralRed: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1)
-            optionLabelThree.textColor = UIColor.lightGrayColor()
-            optionLabelFour.textColor = UIColor.lightGrayColor()
-            
-            checkedTwo = true
-            
-            //automatically go to next question
-            if (pageIndex != (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
-                
-                let testViewController: TestViewController = self.parentViewController?.parentViewController as! TestViewController
-                let startViewController = testViewController.viewControllerAtIndex(pageIndex+1) as ContentViewController
-                let viewControllers = NSArray(object: startViewController)
-                
-                testViewController.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
-                
-            }
-            
-            if (pageIndex == (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
-                goToResultButton.hidden = false
-            }
-        } else if (checkedTwo == true) {
-            
-            DataSource.sharedInstance.currentAnswerSet![pageIndex] = 0
-            
-            checkBoxButtonTwo.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            optionLabelTwo.textColor = UIColor.lightGrayColor()
-            goToResultButton.hidden = true
-            checkedTwo = false
-        }
-    }
+        checkBoxAction(1)
+     }
     
     @IBAction func checkBoxActionThree(sender: UIButton) {
-        if (checkedThree == false) {
-            
-            DataSource.sharedInstance.currentAnswerSet![pageIndex] = 2
-            
-            checkBoxButtonOne.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            checkBoxButtonTwo.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            checkBoxButtonThree.setImage(UIImage(named: "markedCheckBox"), forState: .Normal)
-            checkBoxButtonFour.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            
-            optionLabelOne.textColor = UIColor.lightGrayColor()
-            optionLabelTwo.textColor = UIColor.lightGrayColor()
-            optionLabelThree.textColor = UIColor(colorLiteralRed: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1)
-            optionLabelFour.textColor = UIColor.lightGrayColor()
-            
-            checkedThree = true
-            
-            //automatically go to next question
-            if (pageIndex != (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
-                
-                let testViewController: TestViewController = self.parentViewController?.parentViewController as! TestViewController
-                let startViewController = testViewController.viewControllerAtIndex(pageIndex+1) as ContentViewController
-                let viewControllers = NSArray(object: startViewController)
-                
-                testViewController.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
-                
-            }
-            
-            if (pageIndex == (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
-                goToResultButton.hidden = false
-            }
-        } else if (checkedThree == true) {
-            
-            DataSource.sharedInstance.currentAnswerSet![pageIndex] = 0
-            
-            checkBoxButtonThree.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            optionLabelThree.textColor = UIColor.lightGrayColor()
-            goToResultButton.hidden = true
-            checkedThree = false
-        }
+        checkBoxAction(2)
     }
     
     @IBAction func checkBoxActionFour(sender: UIButton) {
-        if (checkedFour == false) {
+        checkBoxAction(3)
+    }
+    
+    func checkBoxAction(index: Int) {
+        // if its not selected then select it ; if its already selected then unselect it
+        if (checkedBool[index] == false) {
+            //score
+            DataSource.sharedInstance.currentAnswerSet![pageIndex] = index
             
-            DataSource.sharedInstance.currentAnswerSet![pageIndex] = 3
+            checkBoxes[index].setImage(UIImage(named: "markedCheckBox"), forState: .Normal)
             
-            checkBoxButtonOne.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            checkBoxButtonTwo.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            checkBoxButtonThree.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            checkBoxButtonFour.setImage(UIImage(named: "markedCheckBox"), forState: .Normal)
+            optionLabels[index].textColor = UIColor(colorLiteralRed: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1)
             
-            optionLabelOne.textColor = UIColor.lightGrayColor()
-            optionLabelTwo.textColor = UIColor.lightGrayColor()
-            optionLabelThree.textColor = UIColor.lightGrayColor()
-            optionLabelFour.textColor = UIColor(colorLiteralRed: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1)
-            
-            checkedFour = true
+            checkedBool[index] = true
             
             //automatically go to next question
             if (pageIndex != (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
@@ -205,17 +103,20 @@ class ContentViewController: UIViewController {
                 
             }
             
+            // if its a last question then go to result button will become visible
             if (pageIndex == (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
                 goToResultButton.hidden = false
             }
-        } else if (checkedFour == true) {
-            
+        } else if (checkedBool[index] == true) {
             DataSource.sharedInstance.currentAnswerSet![pageIndex] = 0
             
-            checkBoxButtonFour.setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            optionLabelFour.textColor = UIColor.lightGrayColor()
+            checkBoxes[index].setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
+            
+            optionLabels[index].textColor = UIColor.lightGrayColor()
+            
             goToResultButton.hidden = true
-            checkedFour = false
+            
+            checkedBool[index] = false
         }
     }
     
