@@ -63,21 +63,6 @@ class ResultViewController: UIViewController {
         //score
         if let currentAnswerSet = DataSource.sharedInstance.currentAnswerSet {
             scoreLabel.text = String(currentAnswerSet.reduce(0, combine: +))
-            
-            let entityDescription = NSEntityDescription.entityForName("History", inManagedObjectContext: managedObjectContext)
-            let history = History(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
-            
-            history.test = (DataSource.sharedInstance.currentTest?.title)!
-            history.score = String(currentAnswerSet.reduce(0, combine: +))
-            history.date = String(NSDate())
-            
-            print("\(history.test), \(history.score), \(history.date)")
-            
-            do {
-                try managedObjectContext.save()
-            } catch let error as NSError {
-                print(error)
-            }
         }
         
         //action

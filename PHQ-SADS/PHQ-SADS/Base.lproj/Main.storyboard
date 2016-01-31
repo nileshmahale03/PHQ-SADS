@@ -922,6 +922,7 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="goToResultButtonAction:" destination="Rqf-tV-obI" eventType="touchUpInside" id="gbe-Bu-Myr"/>
                                     <segue destination="kMU-pB-70w" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="GhM-6C-WoB"/>
                                 </connections>
                             </button>
@@ -1080,8 +1081,8 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
         <image name="test" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="r8u-r4-9R2"/>
         <segue reference="YTY-m2-fmw"/>
-        <segue reference="e3J-w9-Nr3"/>
+        <segue reference="r8u-r4-9R2"/>
+        <segue reference="GhM-6C-WoB"/>
     </inferredMetricsTieBreakers>
 </document>

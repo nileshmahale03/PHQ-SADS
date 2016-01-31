@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class ContentViewController: UIViewController {
+    
+    var managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     var pageIndex: Int!
     var titleText: String!
@@ -117,6 +120,29 @@ class ContentViewController: UIViewController {
             goToResultButton.hidden = true
             
             checkedBool[index] = false
+        }
+    }
+    
+    //save test score and date to the core data which will get displayes in history tab later
+    @IBAction func goToResultButtonAction(sender: UIButton) {
+        print("pressed go to result button")
+        
+        if let currentAnswerSet = DataSource.sharedInstance.currentAnswerSet {
+
+            let entityDescription = NSEntityDescription.entityForName("History", inManagedObjectContext: managedObjectContext)
+            let history = History(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
+            
+            history.test = (DataSource.sharedInstance.currentTest?.title)!
+            history.score = String(currentAnswerSet.reduce(0, combine: +))
+            history.date = String(NSDate())
+            
+            print("\(history.test), \(history.score), \(history.date)")
+            
+            do {
+                try managedObjectContext.save()
+            } catch let error as NSError {
+                print(error)
+            }
         }
     }
     
