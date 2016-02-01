@@ -1,0 +1,13 @@
+PODS:
+  - Charts (2.1.6)
+  - SWRevealViewController (2.3.0)
+
+DEPENDENCIES:
+  - Charts (~> 2.1)
+  - SWRevealViewController (~> 2.3)
+
+SPEC CHECKSUMS:
+  Charts: 5e1e5ac23898e5b09d226a2fc3e9d86bc281937e
+  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
+
+COCOAPODS: 0.39.0

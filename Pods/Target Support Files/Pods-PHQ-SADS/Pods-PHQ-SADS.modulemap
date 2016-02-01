@@ -1,0 +1,6 @@
+framework module Pods_PHQ_SADS {
+  umbrella header "Pods-PHQ-SADS-umbrella.h"
+
+  export *
+  module * { export * }
+}
