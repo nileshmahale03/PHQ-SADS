@@ -23,7 +23,7 @@ class InfoViewController: UIViewController {
         // When the menu button is tapped, it will call the revealToggle: method to display the left-sidebar menu & when the organize button is tapped, it will call the revealToggle: method to display the right-sidebar menu.
         
         if revealViewController() != nil {
-            revealViewController().rearViewRevealWidth = 200
+            revealViewController().rearViewRevealWidth = 250
             menuBarButton.target = revealViewController()
             menuBarButton.action = "revealToggle:"
             
