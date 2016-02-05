@@ -1,49 +1,19 @@
 //
-//  HistoryTableViewController.swift
+//  MasterHistoryTableViewController.swift
 //  PHQ-SADS
 //
-//  Created by Nilesh Mahale on 1/23/16.
+//  Created by Nilesh Mahale on 2/4/16.
 //  Copyright © 2016 Code-Programming. All rights reserved.
 //
 
 import UIKit
-import CoreData
-import SWRevealViewController
-import Charts
 
-class HistoryTableViewController: UITableViewController {
-
-    var managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-    var history = [History] ()
+class MasterHistoryTableViewController: UITableViewController {
+    
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     @IBOutlet weak var organizeBarButton: UIBarButtonItem!
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        reloadData()
-        tableView.reloadData()
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        tableView.reloadData()
-    }
-    
-    func reloadData() {
 
-        let fetchRequest = NSFetchRequest(entityName: "History")
-        
-        do {
-            if let results = try managedObjectContext.executeFetchRequest(fetchRequest) as? [History] {
-                history = results
-            }
-        } catch {
-            fatalError("There was an error fetching a list of POI's")
-        }
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Add title
@@ -66,7 +36,6 @@ class HistoryTableViewController: UITableViewController {
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -76,29 +45,24 @@ class HistoryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-
+        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return history.count
+        // #warning Incomplete implementation, return the number of rows
+        return 4
     }
 
-    
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("historyCell", forIndexPath: indexPath) as! HistoryTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
         // Configure the cell...
-        let someHistory = history[indexPath.row]
-        
-        cell.dateLabel.text = someHistory.date
-        cell.testLabel.text = someHistory.test
-        cell.scoreLabel.text = someHistory.score
-        
+
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
