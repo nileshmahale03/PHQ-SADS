@@ -16,12 +16,16 @@ class HistoryBarChartViewController: UIViewController {
     var history = [History] ()
     var dates: [String] = [String] ()
     var scores: [Double] = [Double] ()
+    var test: String = ""
     
     
     @IBOutlet weak var barChartView: BarChartView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor(),
+            NSFontAttributeName: UIFont(name: "avenir next condensed", size: 21)!]
         
         if (dates.count == 0 && scores.count == 0) {
             
@@ -46,15 +50,24 @@ class HistoryBarChartViewController: UIViewController {
         }
         
         let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "scores")
+        chartDataSet.colors = ChartColorTemplates.vordiplom()
         //chartDataSet.colors = [UIColor(red: 231.0/255.0, green: 95.0/255.0, blue: 53.0/255.0, alpha: 1)]
         let chartData = BarChartData(xVals: dates, dataSet: chartDataSet)
         barChartView.data = chartData
         
+        barChartView.descriptionText = test
         barChartView.backgroundColor = UIColor(red: 240.0/255.0, green: 242.0/255.0, blue: 243.0/255.0, alpha: 1)
         barChartView.xAxis.labelPosition = .Bottom
-        barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .EaseInBounce)
         
     }
+    
+
+    @IBAction func saveChart(sender: UIBarButtonItem) {
+        print("saving chart to camera roll")
+        barChartView.saveToCameraRoll()
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

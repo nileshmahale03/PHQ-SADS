@@ -16,6 +16,7 @@ class MasterHistoryTableViewController: UITableViewController {
     var dates = [String] ()
     var scoresString: [String] = [String] ()
     var scores: [Double] = [Double] ()
+    var test: String = ""
     
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
@@ -83,6 +84,8 @@ class MasterHistoryTableViewController: UITableViewController {
             destinationViewController.history = history
             destinationViewController.dates = dates
             destinationViewController.scores = scores
+            destinationViewController.test = test
+            destinationViewController.title = test
         }
     }
     
@@ -91,6 +94,8 @@ class MasterHistoryTableViewController: UITableViewController {
         let predicate = NSPredicate(format: "test = %@", filter)
         let fetchRequest = NSFetchRequest(entityName: "History")
         fetchRequest.predicate = predicate
+        
+        test = filter
         
         do {
             scoresString.removeAll()

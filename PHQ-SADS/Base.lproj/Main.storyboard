@@ -1058,6 +1058,13 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="cn9-Ap-98C">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="8wM-gp-dzg">
+                            <connections>
+                                <action selector="saveChart:" destination="73v-5N-QBv" id="z3O-UQ-lW2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="barChartView" destination="Mnx-QZ-TEO" id="OWT-Uq-4IX"/>
                     </connections>
