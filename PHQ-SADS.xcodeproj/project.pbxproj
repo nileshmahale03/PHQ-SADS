@@ -10,8 +10,6 @@
 		20F7376D760ADC6ECC6E023D /* Pods_PHQ_SADS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD649A7F289130EECB47026 /* Pods_PHQ_SADS.framework */; };
 		272F5F791C4C760B003BE5FE /* PHQTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F5F781C4C760B003BE5FE /* PHQTest.swift */; };
 		274B833C1C64460600E7C30A /* MasterHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B833B1C64460600E7C30A /* MasterHistoryTableViewController.swift */; };
-		27521BAE1C5486DD00E76F06 /* DetailHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27521BAD1C5486DD00E76F06 /* DetailHistoryTableViewController.swift */; };
-		27521BB01C548EBB00E76F06 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27521BAF1C548EBB00E76F06 /* HistoryTableViewCell.swift */; };
 		275BEE181C43493800F416CA /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BEE171C43493800F416CA /* DataSource.swift */; };
 		2796C6671C4198ED00989DCE /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796C6661C4198ED00989DCE /* ContentViewController.swift */; };
 		27D9134D1C65BF5900A2BAC1 /* HistoryBarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9134C1C65BF5900A2BAC1 /* HistoryBarChartViewController.swift */; };
@@ -33,8 +31,6 @@
 /* Begin PBXFileReference section */
 		272F5F781C4C760B003BE5FE /* PHQTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHQTest.swift; sourceTree = "<group>"; };
 		274B833B1C64460600E7C30A /* MasterHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterHistoryTableViewController.swift; sourceTree = "<group>"; };
-		27521BAD1C5486DD00E76F06 /* DetailHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHistoryTableViewController.swift; sourceTree = "<group>"; };
-		27521BAF1C548EBB00E76F06 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		275BEE171C43493800F416CA /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		2796C6661C4198ED00989DCE /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		27D9134C1C65BF5900A2BAC1 /* HistoryBarChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryBarChartViewController.swift; sourceTree = "<group>"; };
@@ -120,8 +116,6 @@
 				27EEDE9C1C3766CB00A6CC62 /* ResultViewController.swift */,
 				274B833B1C64460600E7C30A /* MasterHistoryTableViewController.swift */,
 				27D9134C1C65BF5900A2BAC1 /* HistoryBarChartViewController.swift */,
-				27521BAD1C5486DD00E76F06 /* DetailHistoryTableViewController.swift */,
-				27521BAF1C548EBB00E76F06 /* HistoryTableViewCell.swift */,
 				27EEDEA01C3766E700A6CC62 /* InfoViewController.swift */,
 			);
 			name = Controllers;
@@ -298,12 +292,10 @@
 				272F5F791C4C760B003BE5FE /* PHQTest.swift in Sources */,
 				27EEDE841C36E98600A6CC62 /* PHQ_SADS.xcdatamodeld in Sources */,
 				27EEDE911C3764F300A6CC62 /* TestViewController.swift in Sources */,
-				27521BAE1C5486DD00E76F06 /* DetailHistoryTableViewController.swift in Sources */,
 				27EEDE9D1C3766CB00A6CC62 /* ResultViewController.swift in Sources */,
 				27F4D2F61C38A03000D097E0 /* PHQ-SADSViewController.swift in Sources */,
 				27EEDEA11C3766E700A6CC62 /* InfoViewController.swift in Sources */,
 				275BEE181C43493800F416CA /* DataSource.swift in Sources */,
-				27521BB01C548EBB00E76F06 /* HistoryTableViewCell.swift in Sources */,
 				27E0B3251C55923E00BD3752 /* History.swift in Sources */,
 				274B833C1C64460600E7C30A /* MasterHistoryTableViewController.swift in Sources */,
 				27D9134D1C65BF5900A2BAC1 /* HistoryBarChartViewController.swift in Sources */,

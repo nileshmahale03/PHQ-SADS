@@ -102,7 +102,7 @@ class MasterHistoryTableViewController: UITableViewController {
                     if let score = result.valueForKey("score") as? String, date = result.valueForKey("date") as? String {
                         scoresString.append(score)
                         scores = scoresString.map{ Double($0) ?? 0 }
-                        dates.append(date)
+                        dates.append(formatDate(date))
                     }
                 }
                 history = results
@@ -110,6 +110,18 @@ class MasterHistoryTableViewController: UITableViewController {
         } catch {
             print("There was a fetch error!")
         }
+    }
+    
+    func formatDate(date: String) -> String {
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
+        let modifiedDate = dateFormatter.dateFromString(date)
+        dateFormatter.locale = NSLocale.currentLocale()
+        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        let convertedDate = dateFormatter.stringFromDate(modifiedDate!)
+        
+        return convertedDate
     }
 
     

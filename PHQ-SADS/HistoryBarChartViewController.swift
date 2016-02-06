@@ -34,6 +34,7 @@ class HistoryBarChartViewController: UIViewController {
         }
         
     }
+
     
     func setChart(dataPoints: [String], values: [Double]) {
         
