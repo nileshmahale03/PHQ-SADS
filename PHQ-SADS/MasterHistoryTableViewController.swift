@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
 class MasterHistoryTableViewController: UITableViewController {
+    
+    var managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    var history = [History] ()
+    var dates = [String] ()
+    var scoresString: [String] = [String] ()
+    var scores: [Double] = [Double] ()
     
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
@@ -54,6 +61,59 @@ class MasterHistoryTableViewController: UITableViewController {
         return 4
     }
 
+    
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
+        if (segue.identifier == "phq-9") {
+            coreDataPredicateResultsFor("PHQ-9")
+        } else if (segue.identifier == "gad-7") {
+            coreDataPredicateResultsFor("GAD-7")
+        } else if (segue.identifier == "phq-15") {
+            coreDataPredicateResultsFor("PHQ-15")
+        } else if (segue.identifier == "panicSymptoms") {
+            coreDataPredicateResultsFor("Panic Symptoms")
+        }
+        
+        if let destinationViewController = segue.destinationViewController as? HistoryBarChartViewController {
+            destinationViewController.history = history
+            destinationViewController.dates = dates
+            destinationViewController.scores = scores
+        }
+    }
+    
+    func coreDataPredicateResultsFor(filter: String) {
+        let filter = filter
+        let predicate = NSPredicate(format: "test = %@", filter)
+        let fetchRequest = NSFetchRequest(entityName: "History")
+        fetchRequest.predicate = predicate
+        
+        do {
+            scoresString.removeAll()
+            scores.removeAll()
+            dates.removeAll()
+            
+            if let results = try managedObjectContext.executeFetchRequest(fetchRequest) as? [History] {
+                for result in results {
+                    if let score = result.valueForKey("score") as? String, date = result.valueForKey("date") as? String {
+                        scoresString.append(score)
+                        scores = scoresString.map{ Double($0) ?? 0 }
+                        dates.append(date)
+                    }
+                }
+                history = results
+            }
+        } catch {
+            print("There was a fetch error!")
+        }
+    }
+
+    
+    
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
@@ -99,14 +159,6 @@ class MasterHistoryTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

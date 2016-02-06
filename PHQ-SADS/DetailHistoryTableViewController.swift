@@ -14,11 +14,12 @@ class DetailHistoryTableViewController: UITableViewController {
 
     var managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var history = [History] ()
+    var dates = [String] ()
+    var scores = [String] ()
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        reloadData()
+    
         tableView.reloadData()
     }
     
@@ -26,26 +27,21 @@ class DetailHistoryTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    func reloadData() {
 
-        let fetchRequest = NSFetchRequest(entityName: "History")
-        
-        do {
-            if let results = try managedObjectContext.executeFetchRequest(fetchRequest) as? [History] {
-                history = results
-            }
-        } catch {
-            fatalError("There was an error fetching a list of POI's")
-        }
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Add title
         self.navigationItem.title = "History"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor(),
             NSFontAttributeName: UIFont(name: "avenir next condensed", size: 21)!]
+        
+        for score in scores {
+            print(score)
+        }
+        
+        for date in dates {
+            print(date)
+        }
     }
 
     override func didReceiveMemoryWarning() {
