@@ -62,7 +62,7 @@ class DataSource: NSObject {
     
     var phq15Test: PHQTest = PHQTest(
         questions: [
-        "During the last 4 weeks, how much have you been Not bothered by any of the following problems? \n" + "Stomach pain.",
+        "During the last 4 weeks, how much have you been bothered by any of the following problems? \n" + "Stomach pain.",
         "Back pain.",
         "Pain in your arms, legs, or joints (knees, hips, etc.).",
         "Feeling tired or having little energy.",

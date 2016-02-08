@@ -1,31 +1,23 @@
 //
-//  MasterHistoryTableViewController.swift
+//  InfoTableViewController.swift
 //  PHQ-SADS
 //
-//  Created by Nilesh Mahale on 2/4/16.
+//  Created by Nilesh Mahale on 2/7/16.
 //  Copyright © 2016 Code-Programming. All rights reserved.
 //
 
 import UIKit
-import CoreData
 
-class MasterHistoryTableViewController: UITableViewController {
-    
-    var managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-    var history = [History] ()
-    var dates = [String] ()
-    var scoresString: [String] = [String] ()
-    var scores: [Double] = [Double] ()
-    var test: String = ""
-    
+class InfoTableViewController: UITableViewController {
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     @IBOutlet weak var organizeBarButton: UIBarButtonItem!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Add title
-        self.navigationItem.title = "History"
+        self.navigationItem.title = "Info"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor(),
             NSFontAttributeName: UIFont(name: "avenir next condensed", size: 21)!]
         
@@ -55,84 +47,15 @@ class MasterHistoryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+
         return 4
     }
 
-    
-    
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-        if (segue.identifier == "phq-9") {
-            coreDataPredicateResultsFor("PHQ-9")
-        } else if (segue.identifier == "gad-7") {
-            coreDataPredicateResultsFor("GAD-7")
-        } else if (segue.identifier == "phq-15") {
-            coreDataPredicateResultsFor("PHQ-15")
-        } else if (segue.identifier == "panicSymptoms") {
-            coreDataPredicateResultsFor("Panic Symptoms")
-        }
-        
-        if let destinationViewController = segue.destinationViewController as? HistoryBarChartViewController {
-            destinationViewController.history = history
-            destinationViewController.dates = dates
-            destinationViewController.scores = scores
-            destinationViewController.test = test
-            destinationViewController.title = test
-        }
-    }
-    
-    func coreDataPredicateResultsFor(filter: String) {
-        let filter = filter
-        let predicate = NSPredicate(format: "test = %@", filter)
-        let fetchRequest = NSFetchRequest(entityName: "History")
-        fetchRequest.predicate = predicate
-        
-        test = filter
-        
-        do {
-            scoresString.removeAll()
-            scores.removeAll()
-            dates.removeAll()
-            
-            if let results = try managedObjectContext.executeFetchRequest(fetchRequest) as? [History] {
-                for result in results {
-                    if let score = result.valueForKey("score") as? String, date = result.valueForKey("date") as? String {
-                        scoresString.append(score)
-                        scores = scoresString.map{ Double($0) ?? 0 }
-                        dates.append(formatDate(date))
-                    }
-                }
-                history = results
-            }
-        } catch {
-            print("There was a fetch error!")
-        }
-    }
-    
-    func formatDate(date: String) -> String {
-        
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
-        let modifiedDate = dateFormatter.dateFromString(date)
-        dateFormatter.locale = NSLocale.currentLocale()
-        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
-        let convertedDate = dateFormatter.stringFromDate(modifiedDate!)
-        
-        return convertedDate
-    }
-
-    
-    
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
@@ -178,6 +101,14 @@ class MasterHistoryTableViewController: UITableViewController {
     }
     */
 
+    /*
+    // MARK: - Navigation
 
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

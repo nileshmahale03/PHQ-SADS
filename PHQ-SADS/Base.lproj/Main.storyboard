@@ -27,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-163" y="1330"/>
+            <point key="canvasLocation" x="-59" y="1842"/>
         </scene>
         <!--Left Menu Table View Controller-->
         <scene sceneID="4uD-Go-1tJ">
@@ -155,107 +155,6 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="wYh-JB-3KT">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jqB-zg-WqA">
-                                        <rect key="frame" x="0.0" y="220" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jqB-zg-WqA" id="liN-d5-aEH">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k1-wt-biB">
-                                                    <rect key="frame" x="19" y="21" width="119" height="25"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="26"/>
-                                                    <color key="textColor" red="0.90588235289999997" green="0.37254901959999998" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="u3Q-WY-SSG">
-                                        <rect key="frame" x="0.0" y="264" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u3Q-WY-SSG" id="vkS-aR-pPY">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="OeY-n6-7v9">
-                                                    <rect key="frame" x="18" y="4" width="35" height="35"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is Depression?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dez-yS-PKa">
-                                                    <rect key="frame" x="61" y="6" width="161" height="31"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="22"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6BH-b1-mBL">
-                                        <rect key="frame" x="0.0" y="308" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6BH-b1-mBL" id="9Ge-he-A1U">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="Afg-q8-c1n">
-                                                    <rect key="frame" x="18" y="4" width="35" height="35"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Symptoms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw5-1k-muZ">
-                                                    <rect key="frame" x="61" y="11" width="136" height="21"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="22"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nvo-49-SxK">
-                                        <rect key="frame" x="0.0" y="352" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nvo-49-SxK" id="Sb7-Mf-3oe">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="hMp-hL-g5m">
-                                                    <rect key="frame" x="18" y="4" width="35" height="35"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Causes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEu-mV-GsL">
-                                                    <rect key="frame" x="61" y="11" width="136" height="21"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="22"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tC6-ii-QMP">
-                                        <rect key="frame" x="0.0" y="396" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tC6-ii-QMP" id="RpL-gq-W7T">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="HFk-FV-quO">
-                                                    <rect key="frame" x="18" y="4" width="35" height="35"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Treatments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEc-JP-Eit">
-                                                    <rect key="frame" x="61" y="11" width="136" height="21"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="22"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="fnv-Tn-ZXH" id="oK9-GC-QYp"/>
@@ -265,7 +164,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kRv-UL-PTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834" y="1039"/>
+            <point key="canvasLocation" x="810" y="1423"/>
         </scene>
         <!--Right Menu Table View Controller-->
         <scene sceneID="dK6-tY-GB3">
@@ -412,7 +311,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="AHv-zn-1nk" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="9XD-am-n6B"/>
+                                            <segue destination="qCC-Z2-1aB" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="lfR-JL-Mfs"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -557,33 +456,108 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WW6-dn-haC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834" y="1721"/>
+            <point key="canvasLocation" x="810" y="2201"/>
         </scene>
-        <!--Info View Controller-->
-        <scene sceneID="c7k-fU-BXA">
+        <!--Info Table View Controller-->
+        <scene sceneID="4qO-AT-dTy">
             <objects>
-                <viewController id="cbh-LS-xvS" customClass="InfoViewController" customModule="PHQ_SADS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eVY-hd-zk5"/>
-                        <viewControllerLayoutGuide type="bottom" id="2hj-qW-Vsh"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kx5-sX-9hi">
+                <tableViewController id="3sP-QT-Wi0" customClass="InfoTableViewController" customModule="PHQ_SADS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Ug-WY-Aha">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="BQI-Af-qNw">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="1na-EY-aeA"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="lqG-DD-7CD"/>
+                        <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection id="dhC-qF-hy3">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="i5z-9z-HBf">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i5z-9z-HBf" id="Hj2-Gx-LmG">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Depression Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5i-Ff-xrY">
+                                                    <rect key="frame" x="8" y="32" width="584" height="36"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="26"/>
+                                                    <color key="textColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="p2A-Db-50a">
+                                        <rect key="frame" x="0.0" y="164" width="600" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p2A-Db-50a" id="3Wr-Zk-2vc">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Send Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUy-bH-hgC">
+                                                    <rect key="frame" x="8" y="32" width="584" height="36"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="26"/>
+                                                    <color key="textColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DHs-eJ-rA8">
+                                        <rect key="frame" x="0.0" y="264" width="600" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DHs-eJ-rA8" id="s7U-tq-wzf">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to use this app?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFp-1g-zK7">
+                                                    <rect key="frame" x="8" y="32" width="584" height="36"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="26"/>
+                                                    <color key="textColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dux-Jv-U3S">
+                                        <rect key="frame" x="0.0" y="364" width="600" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dux-Jv-U3S" id="WcK-kh-Xyb">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="App Credits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCO-Z6-jmZ">
+                                                    <rect key="frame" x="8" y="32" width="584" height="36"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="26"/>
+                                                    <color key="textColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="3sP-QT-Wi0" id="lNU-He-ObX"/>
+                            <outlet property="delegate" destination="3sP-QT-Wi0" id="rjl-dY-fmR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="h0x-4v-S3F">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="6Ll-W7-bIS"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="6dQ-6S-PqF"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuBarButton" destination="1na-EY-aeA" id="7Gv-6Q-1um"/>
-                        <outlet property="organizeBarButton" destination="lqG-DD-7CD" id="SYw-H6-Jcr"/>
+                        <outlet property="menuBarButton" destination="6Ll-W7-bIS" id="vIB-Un-qZ2"/>
+                        <outlet property="organizeBarButton" destination="6dQ-6S-PqF" id="xMX-7F-HBR"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yaA-8i-0LL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P14-m6-eMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2529" y="3041"/>
+            <point key="canvasLocation" x="2529" y="3113"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="dmm-gN-T7s">
@@ -783,7 +757,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVB-Kz-VM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2529" y="2359"/>
+            <point key="canvasLocation" x="2529" y="2387"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="35p-3d-0NZ">
@@ -834,7 +808,7 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fr1-3c-5Cn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2529" y="328"/>
+            <point key="canvasLocation" x="2524" y="328"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="tF6-an-pBa">
@@ -868,7 +842,7 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="tc1-1Y-1ib" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="goB-hg-Puu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3251" y="715"/>
+            <point key="canvasLocation" x="3323" y="699"/>
         </scene>
         <!--Content View Controller-->
         <scene sceneID="nqm-sc-lha">
@@ -1030,7 +1004,7 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Md6-rW-0LS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3251" y="1369"/>
+            <point key="canvasLocation" x="3331" y="1389"/>
         </scene>
         <!--History Bar Chart View Controller-->
         <scene sceneID="G2v-XB-n87">
@@ -1071,7 +1045,7 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nb9-jt-Jr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3491" y="2087"/>
+            <point key="canvasLocation" x="3331" y="2387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xWA-lq-Ew5">
@@ -1110,24 +1084,6 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
             <point key="canvasLocation" x="1717" y="1693"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="o4u-3m-fX1">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AHv-zn-1nk" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ERl-sA-l8e">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="cbh-LS-xvS" kind="relationship" relationship="rootViewController" id="5jf-Hw-tRp"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oXj-22-oDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1717" y="3041"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="Sql-41-WLG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zCN-Sc-rTV" sceneMemberID="viewController">
@@ -1161,7 +1117,25 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZhS-FK-vP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1717" y="2359"/>
+            <point key="canvasLocation" x="1717" y="2387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dkb-bC-bhB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qCC-Z2-1aB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dPf-Fu-FRK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3sP-QT-Wi0" kind="relationship" relationship="rootViewController" id="ePj-RI-116"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p85-ZG-een" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="3113"/>
         </scene>
     </scenes>
     <resources>
@@ -1174,8 +1148,8 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
         <image name="test" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="hGD-9j-jbJ"/>
         <segue reference="YTY-m2-fmw"/>
-        <segue reference="msX-ii-KzW"/>
         <segue reference="2Nh-bg-Fi1"/>
         <segue reference="GhM-6C-WoB"/>
     </inferredMetricsTieBreakers>
