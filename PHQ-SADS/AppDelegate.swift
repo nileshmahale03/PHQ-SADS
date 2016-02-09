@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+import Fabric
+import Crashlytics
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -39,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("There was a fetch error!")
         }
         
+        Fabric.with([Crashlytics.self])
         return true
     }
 

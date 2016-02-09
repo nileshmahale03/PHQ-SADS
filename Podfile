@@ -7,6 +7,8 @@ target 'PHQ-SADS' do
 
 pod 'Charts', '~> 2.1'
 pod 'SWRevealViewController', '~> 2.3'
+pod 'Fabric'
+pod 'Crashlytics'
 
 end
 

@@ -1,13 +1,20 @@
 PODS:
   - Charts (2.1.6)
+  - Crashlytics (3.6.0):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.5)
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
   - Charts (~> 2.1)
+  - Crashlytics
+  - Fabric
   - SWRevealViewController (~> 2.3)
 
 SPEC CHECKSUMS:
   Charts: 5e1e5ac23898e5b09d226a2fc3e9d86bc281937e
+  Crashlytics: e4e8d02914f2608fbc7bf42b1a7af838b0db67a2
+  Fabric: 338ffd3c2afcab120638907b4251189de9ad17b3
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
 COCOAPODS: 0.39.0
