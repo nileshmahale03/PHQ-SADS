@@ -119,11 +119,9 @@ class ContentViewController: UIViewController {
             //score
             DataSource.sharedInstance.currentAnswerSet![pageIndex] = index
             
-            checkBoxes[index].setImage(UIImage(named: "markedCheckBox"), forState: .Normal)
+            selectOption(index)
             
-            optionLabels[index].textColor = UIColor(colorLiteralRed: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1)
-            
-            checkedBool[index] = true
+            clearOtherOptions(index)
             
             //automatically go to next question
             if (pageIndex != (DataSource.sharedInstance.currentTest?.questions.count)! - 1) {
@@ -143,14 +141,32 @@ class ContentViewController: UIViewController {
         } else if (checkedBool[index] == true) {
             DataSource.sharedInstance.currentAnswerSet![pageIndex] = 0
             
-            checkBoxes[index].setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
-            
-            optionLabels[index].textColor = UIColor.lightGrayColor()
+            clearOption(index)
             
             goToResultButton.hidden = true
-            
-            checkedBool[index] = false
         }
+    }
+    
+    func clearOtherOptions(let index : Int){
+        var options = [0, 1, 2, 3]
+        options.removeAtIndex(index)
+        
+        for i in options {
+            clearOption(i)
+        }
+        
+    }
+    
+    func selectOption(let index: Int){
+        checkBoxes[index].setImage(UIImage(named: "markedCheckBox"), forState: .Normal)
+        optionLabels[index].textColor = UIColor(colorLiteralRed: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1)
+        checkedBool[index] = true
+    }
+    
+    func clearOption(let index: Int){
+        checkBoxes[index].setImage(UIImage(named: "blankedCheckBox"), forState: .Normal)
+        optionLabels[index].textColor = UIColor.lightGrayColor()
+        checkedBool[index] = false
     }
     
     //save test score and date to the core data which will get displayes in history tab later
