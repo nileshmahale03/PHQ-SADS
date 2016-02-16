@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		20F7376D760ADC6ECC6E023D /* Pods_PHQ_SADS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD649A7F289130EECB47026 /* Pods_PHQ_SADS.framework */; };
+		27053E851C72E043004ECC63 /* DepressionSourceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27053E841C72E043004ECC63 /* DepressionSourceTableViewController.swift */; };
 		2729E5031C68262900D6DC0D /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2729E5021C68262900D6DC0D /* InfoTableViewController.swift */; };
 		272F5F791C4C760B003BE5FE /* PHQTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F5F781C4C760B003BE5FE /* PHQTest.swift */; };
 		274B833C1C64460600E7C30A /* MasterHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B833B1C64460600E7C30A /* MasterHistoryTableViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27053E841C72E043004ECC63 /* DepressionSourceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepressionSourceTableViewController.swift; sourceTree = "<group>"; };
 		2729E5021C68262900D6DC0D /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		272F5F781C4C760B003BE5FE /* PHQTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHQTest.swift; sourceTree = "<group>"; };
 		274B833B1C64460600E7C30A /* MasterHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterHistoryTableViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				274B833B1C64460600E7C30A /* MasterHistoryTableViewController.swift */,
 				27D9134C1C65BF5900A2BAC1 /* HistoryBarChartViewController.swift */,
 				2729E5021C68262900D6DC0D /* InfoTableViewController.swift */,
+				27053E841C72E043004ECC63 /* DepressionSourceTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				275BEE181C43493800F416CA /* DataSource.swift in Sources */,
 				27E0B3251C55923E00BD3752 /* History.swift in Sources */,
 				274B833C1C64460600E7C30A /* MasterHistoryTableViewController.swift in Sources */,
+				27053E851C72E043004ECC63 /* DepressionSourceTableViewController.swift in Sources */,
 				27D9134D1C65BF5900A2BAC1 /* HistoryBarChartViewController.swift in Sources */,
 				27EEDEA51C37724E00A6CC62 /* LeftMenuTableViewController.swift in Sources */,
 				2729E5031C68262900D6DC0D /* InfoTableViewController.swift in Sources */,

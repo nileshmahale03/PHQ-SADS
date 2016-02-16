@@ -355,6 +355,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Nmr-bj-JDG" kind="show" id="fkh-Al-41z"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="p2A-Db-50a">
                                         <rect key="frame" x="0.0" y="164" width="600" height="100"/>
@@ -936,6 +939,35 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nb9-jt-Jr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3331" y="2387"/>
+        </scene>
+        <!--Depression Source Table View Controller-->
+        <scene sceneID="V5w-HK-8Yd">
+            <objects>
+                <tableViewController id="Nmr-bj-JDG" customClass="DepressionSourceTableViewController" customModule="PHQ_SADS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="i5O-Oi-QhO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="b6i-ee-0nn">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b6i-ee-0nn" id="7mg-eB-fGM">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="Nmr-bj-JDG" id="T9w-v5-P0L"/>
+                            <outlet property="delegate" destination="Nmr-bj-JDG" id="kbj-MZ-dC6"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SAx-Pp-mu5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3331" y="3113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xWA-lq-Ew5">
