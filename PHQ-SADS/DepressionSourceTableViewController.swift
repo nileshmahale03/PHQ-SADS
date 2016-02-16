@@ -51,6 +51,9 @@ class DepressionSourceTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
         cell.textLabel?.text = depressionSourceName[indexPath.row]
+        
+        cell.textLabel?.font = UIFont(name: "avenir next condensed", size: 21)
+        
         cell.textLabel?.textColor = UIColor(colorLiteralRed: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1)
         
         return cell
