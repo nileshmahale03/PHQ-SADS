@@ -12,7 +12,7 @@ class InfoTableViewController: UITableViewController {
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     @IBOutlet weak var organizeBarButton: UIBarButtonItem!
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,7 @@ class InfoTableViewController: UITableViewController {
             
             self.tableView.separatorColor = UIColor.clearColor()
         }
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,9 +54,26 @@ class InfoTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 4
+        return 5
+    }
+    
+    
+    @IBAction func shareButtonAction(sender: UIButton) {
+        displayShareSheet("Check out PHQ-SADS - an app for self-administering screening and diagnostic of mental health disorders")
     }
 
+    func displayAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        presentViewController(alertController, animated: true, completion: nil)
+        return
+    }
+    
+    func displayShareSheet(shareContent:String) {
+        let activityViewController = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
+        presentViewController(activityViewController, animated: true, completion: {})
+    }
+    
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
