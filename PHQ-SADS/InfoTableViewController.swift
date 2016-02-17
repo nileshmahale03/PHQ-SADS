@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class InfoTableViewController: UITableViewController {
+class InfoTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     @IBOutlet weak var organizeBarButton: UIBarButtonItem!
@@ -57,7 +58,7 @@ class InfoTableViewController: UITableViewController {
         return 5
     }
     
-    
+    // MARK: - Share Button Action
     @IBAction func shareButtonAction(sender: UIButton) {
         print("Share button clicked !")
         displayShareSheet("Check out PHQ-SADS - an app for self-administering screening and diagnostic of mental health disorders")
@@ -73,6 +74,54 @@ class InfoTableViewController: UITableViewController {
     func displayShareSheet(shareContent:String) {
         let activityViewController = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
         presentViewController(activityViewController, animated: true, completion: {})
+    }
+    
+    
+    // MARK: - Send Feedback Button Action
+    @IBAction func sendFeedbackButtonAction(sender: UIButton) {
+        print("Send Feedbcak Button clicked")
+        showEmail()
+    }
+    
+    
+    func showEmail() {
+        // make sure your device can send an email 
+        guard MFMailComposeViewController.canSendMail() else {
+            return
+        }
+        
+        let emailTitle = "Feedback"
+        let messageBody = "Great App"
+        let toRecipients = ["code-programming@outlook.com"]
+        
+        //Initialize the mail composer and populate the mail content
+        let mailComposer = MFMailComposeViewController()
+        mailComposer.mailComposeDelegate = self
+        mailComposer.setSubject(emailTitle)
+        mailComposer.setMessageBody(messageBody, isHTML: false)
+        mailComposer.setToRecipients(toRecipients)
+        
+        // Present mail view controller on screen
+        presentViewController(mailComposer, animated: true, completion: nil)
+        
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        
+        switch result.rawValue {
+        case MFMailComposeResultCancelled.rawValue:
+            print("Mail cancelled")
+        case MFMailComposeResultSaved.rawValue:
+            print("Mail saved")
+        case MFMailComposeResultSent.rawValue:
+            print("Mail sent")
+        case MFMailComposeResultFailed.rawValue:
+            print("Failed to send: \(error)")
+        default:
+            break
+        }
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     /*
