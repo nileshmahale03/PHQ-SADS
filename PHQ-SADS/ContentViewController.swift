@@ -100,15 +100,18 @@ class ContentViewController: UIViewController {
     @IBAction func checkBoxActionOne(sender: UIButton) {
         checkBoxAction(0)
     }
-
+    
+    // This is what will happen when user clicks 2nd button
     @IBAction func checkBoxActionTwo(sender: UIButton) {
         checkBoxAction(1)
      }
     
+    // This is what will happen when user clicks 3rd button
     @IBAction func checkBoxActionThree(sender: UIButton) {
         checkBoxAction(2)
     }
     
+    // This is what will happen when user clicks 4th button
     @IBAction func checkBoxActionFour(sender: UIButton) {
         checkBoxAction(3)
     }
@@ -169,7 +172,7 @@ class ContentViewController: UIViewController {
     
     //save test score and date to the core data which will get displayes in history tab later
     @IBAction func goToResultButtonAction(sender: UIButton) {
-        print("pressed go to result button")
+        //print("pressed go to result button")
         
         if let currentAnswerSet = DataSource.sharedInstance.currentAnswerSet {
 
@@ -180,7 +183,7 @@ class ContentViewController: UIViewController {
             history.score = String(currentAnswerSet.reduce(0, combine: +))
             history.date = String(NSDate())
             
-            print("\(history.test), \(history.score), \(history.date)")
+            //print("\(history.test), \(history.score), \(history.date)")
             
             do {
                 try managedObjectContext.save()

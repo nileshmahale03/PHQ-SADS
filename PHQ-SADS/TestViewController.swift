@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SWRevealViewController
 
 class TestViewController: UIViewController, UIPageViewControllerDataSource {
     
@@ -21,8 +22,8 @@ class TestViewController: UIViewController, UIPageViewControllerDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Add title
-        //UIColor(colorLiteralRed: 231.0/255.0, green: 95.0/255.0, blue: 53.0/255.0, alpha: 1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor(),
             NSFontAttributeName: UIFont(name: "avenir next condensed", size: 21)!]
         
@@ -31,11 +32,11 @@ class TestViewController: UIViewController, UIPageViewControllerDataSource {
         if revealViewController() != nil {
             revealViewController().rearViewRevealWidth = 200
             menuBarButton.target = revealViewController()
-            menuBarButton.action = "revealToggle:"
+            menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
             
             revealViewController().rightViewRevealWidth = 150
             organizeBarButton.target = revealViewController()
-            organizeBarButton.action = "rightRevealToggle:"
+            organizeBarButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
             
         // User can swipe the content area to activate the sidebar as well
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())

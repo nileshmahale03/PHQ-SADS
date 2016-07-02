@@ -23,6 +23,7 @@ class ResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Add title
         self.navigationItem.title = "Result"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor(),
@@ -33,11 +34,11 @@ class ResultViewController: UIViewController {
         if revealViewController() != nil {
             revealViewController().rearViewRevealWidth = 200
             menuBarButton.target = revealViewController()
-            menuBarButton.action = "revealToggle:"
+            menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
             
             revealViewController().rightViewRevealWidth = 150
             organizeBarButton.target = revealViewController()
-            organizeBarButton.action = "rightRevealToggle:"
+            organizeBarButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
             
             // User can swipe the content area to activate the sidebar as well
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -80,21 +81,4 @@ class ResultViewController: UIViewController {
             }
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

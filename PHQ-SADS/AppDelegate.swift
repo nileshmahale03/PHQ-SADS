@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pageController.currentPageIndicatorTintColor = UIColor(colorLiteralRed: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1)
         pageController.backgroundColor = UIColor(colorLiteralRed: 240.0/255.0, green: 242.0/255.0, blue: 243.0/255.0, alpha: 1)
 
+/*
         // print all the saved results / history
         let fetchRequest = NSFetchRequest(entityName: "History")
         
@@ -41,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             print("There was a fetch error!")
         }
+*/
         
         Fabric.with([Crashlytics.self])
         return true
