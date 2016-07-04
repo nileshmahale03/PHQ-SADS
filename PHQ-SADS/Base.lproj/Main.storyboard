@@ -719,7 +719,7 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wc-G4-IxF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="2Wc-G4-IxF">
                                 <rect key="frame" x="20" y="28" width="560" height="257"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
                                 <color key="textColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
@@ -1042,9 +1042,9 @@ The PHQ-SADS was developed by Robert L. Spitzer, MD, and colleagues.</string>
         <image name="test" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="e3J-w9-Nr3"/>
-        <segue reference="YTY-m2-fmw"/>
         <segue reference="hGD-9j-jbJ"/>
+        <segue reference="YTY-m2-fmw"/>
         <segue reference="2Nh-bg-Fi1"/>
+        <segue reference="GhM-6C-WoB"/>
     </inferredMetricsTieBreakers>
 </document>
